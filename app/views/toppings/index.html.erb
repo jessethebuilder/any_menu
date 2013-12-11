@@ -1,0 +1,33 @@
+<h1>Listing toppings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Cost</th>
+      <th>Topping list</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @toppings.each do |topping| %>
+      <tr>
+        <td><%= topping.name %></td>
+        <td><%= topping.description %></td>
+        <td><%= topping.cost %></td>
+        <td><%= topping.topping_list_id %></td>
+        <td><%= link_to 'Show', topping %></td>
+        <td><%= link_to 'Edit', edit_topping_path(topping) %></td>
+        <td><%= link_to 'Destroy', topping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topping', new_topping_path %>

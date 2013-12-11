@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @topping.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @topping.description %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @topping.cost %>
+</p>
+
+<p>
+  <strong>Topping list:</strong>
+  <%= @topping.topping_list_id %>
+</p>
+
+<%= link_to 'Edit', edit_topping_path(@topping) %> |
+<%= link_to 'Back', toppings_path %>

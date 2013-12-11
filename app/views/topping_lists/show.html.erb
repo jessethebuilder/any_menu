@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @topping_list.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @topping_list.description %>
+</p>
+
+<%= link_to 'Edit', edit_topping_list_path(@topping_list) %> |
+<%= link_to 'Back', topping_lists_path %>

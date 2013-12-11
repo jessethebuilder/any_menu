@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Tax exempt:</strong>
+  <%= @item.tax_exempt %>
+</p>
+
+<p>
+  <strong>Dont deliver:</strong>
+  <%= @item.dont_deliver %>
+</p>
+
+<p>
+  <strong>Topping list:</strong>
+  <%= @item.topping_list_id %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
