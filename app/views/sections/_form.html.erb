@@ -1,0 +1,54 @@
+<%= form_for @section do |f| %>
+   <% if @section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@section.errors.count, "error") %> prohibited this store from being saved:</h2>
+      <ul>
+        <% @section.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <%= f.hidden_field :id_for_menu %>
+
+  <!-- todo this needs an option to add an existing section to this menu. Maybe in new.html.erb-->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, :class => 'form-control'%>
+      </div>
+
+
+    </div><!--col-->
+
+
+    <div class="col-md-4">
+
+      <div class="form-group">
+        <%= f.submit :class => 'btn btn-primary' %>
+      </div>
+
+      <% unless @section.new_record? %>
+        <%= link_to 'Delete Section', @section, :method => :delete, :class => 'btn btn-danger',
+            :data => { :confirm => 'This will PERMANENTLY delete this section from ALL MENUS. Are you sure?' }%>
+
+        <% if @sectionalization %>
+
+        <% end %>
+      <% end %>
+
+
+    </div><!--col-->
+
+
+  </div><!--row-->
+<% end %>

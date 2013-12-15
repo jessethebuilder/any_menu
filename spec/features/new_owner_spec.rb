@@ -21,6 +21,7 @@ describe 'new owner specs' do
 
     User.first.user_type.should == 'owner'
     fill_in 'Store Name', :with => Faker::Company.bs
+    fill_in 'Sales tax rate', :with => Random.rand(0.0..15.0)
     click_button 'Create Store'
 
     within('#top_nav') do

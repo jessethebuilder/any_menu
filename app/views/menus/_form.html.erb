@@ -1,3 +1,4 @@
+<div class="row">
 <%= form_for(@menu) do |f| %>
   <% if @menu.errors.any? %>
     <div id="error_explanation">
@@ -23,9 +24,30 @@
     <div class="form-group hidden">
       <%= f.number_field :store_id, :value => store.id %>
     </div>
+
+    <div>
+      <%= render :partial => 'sections/list', :locals => {:sections => @menu.sections} unless @menu.new_record? %>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Hours of Operation</h2>
+    <%= f.fields_for :hours_available do |ha_fields| %>
+        <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
+    <% end %>
+  </div><!--col-->
+
+  <div class="col-md-4">
     <div class="form-group">
       <%= f.submit :class => 'btn btn-primary' %>
     </div>
-  </div>
-<% end %>
 
+    <% unless @menu.new_record? %>
+      <div class="form-group">
+        <%= link_to 'Delete Menu', @menu, :method => :delete, :class => 'btn btn-danger',
+                                   :data => { :confirm => 'This will delete this Menu PERMANENTLY. Are you sure?' }%>
+      </div>
+    <% end %>
+  </div><!--col-->
+<% end %>
+</div><!--row-->

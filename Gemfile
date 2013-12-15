@@ -36,12 +36,6 @@ end
 gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
-gem 'bootstrap-timepicker-rails'
-
-#gem 'bootstrap-timepicker-rails', :require => 'bootstrap-timepicker-rails',
-#    :git => 'git://github.com/tispratik/bootstrap-timepicker-rails.git'
-
-#gem "jquery-timepicker-rails"
 
 gem 'devise'
 
@@ -50,6 +44,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'wdm'
   gem 'database_cleaner', '~> 1.0.0rc'
+  gem 'timecop'
 end
 
 group :test do

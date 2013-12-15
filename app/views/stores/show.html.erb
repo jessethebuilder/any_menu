@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @store.name %>
-</p>
+  <div>
+    <strong>Name:</strong>
+    <%= @store.name %>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @store.description %>
-</p>
+  <div>
+    <strong>Description:</strong>
+    <%= @store.description %>
+  </div>
 
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+  <div>
+    <strong>Sales tax rate:</strong>
+    <%= @store.sales_tax_rate %>%
+  </div>
+
+  <div class="form-group">
+    <%= link_to 'Edit', edit_store_path(@store), :class => 'btn btn-default' %>
+  </div>
+</div>

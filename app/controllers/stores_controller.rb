@@ -1,7 +1,8 @@
 class StoresController < ApplicationController
   include ApplicationHelper
+  before_action :set_store, only: [:show, :edit, :update, :destroy]
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [:new, :create, :update, :edit]
 
 
 
@@ -19,41 +20,30 @@ class StoresController < ApplicationController
   # GET /stores/1.json
   def show
   end
-
-  # GET /stores/new
-  def new
-    @store = Store.new
-    @hours_available = HoursAvailable.new
-    @store.hours_available = @hours_available
-  end
-
-  # GET /stores/1/edit
   def edit
   end
 
-  # POST /stores
-  # POST /stores.json
+  def new
+    @store = Store.new
+    @store.build_hours_available
+  end
+
   def create
     @store = Store.new(store_params)
 
-
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: 'Store was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @store }
+        format.html { redirect_to edit_store_path(@store), notice: 'Store was successfully created.' }
       else
         format.html { render action: 'new' }
-        format.json { render json: @store.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /stores/1
-  # PATCH/PUT /stores/1.json
   def update
     respond_to do |format|
       if @store.update(store_params)
-        format.html { redirect_to @store, notice: 'Store was successfully updated.' }
+        format.html { redirect_to edit_store_path(@store), notice: 'Store was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end
@@ -78,6 +68,10 @@ class StoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
-      params.require(:store).permit(:name, :description, :delivers, :sales_tax_rate)
+      params.require(:store).permit(:name, :description, :delivers, :sales_tax_rate,
+                                    :hours_available_attributes => [:id, :sunday_open, :sunday_close, :monday_open, :monday_close,
+                                                                    :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close,
+                                                                    :thursday_open, :thursday_close, :friday_open, :friday_close,
+                                                                    :saturday_open, :saturday_close])
     end
 end

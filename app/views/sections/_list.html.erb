@@ -1,0 +1,13 @@
+<div id="section_list">
+  <h2>Sections</h2>
+  <ul>
+    <% sections.each do |s| %>
+        <li>
+          <%= link_to s.name, edit_menu_section_path(@menu, s) %>
+
+          <%= link_to 'remove', sectionalization_path(s.sectionalization(@menu)), :method => :delete %>
+        </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add Section', new_menu_section_path(@menu), :class => 'btn btn-default' %>
+</div>

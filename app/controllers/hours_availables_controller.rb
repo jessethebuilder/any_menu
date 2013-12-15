@@ -9,7 +9,7 @@ class HoursAvailablesController < ApplicationController
   end
 
   def hours_available_params
-    params.require(:item).permit(:sunday_open, :sunday_close, :monday_open, :monday_close, :tuesday_open, :tuesday_close,
+    params.require(:hours_available).permit(:sunday_open, :sunday_close, :monday_open, :monday_close, :tuesday_open, :tuesday_close,
                                  :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close,
                                  :saturday_open, :saturday_close)
   end

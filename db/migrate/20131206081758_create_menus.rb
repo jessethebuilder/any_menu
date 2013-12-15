@@ -5,7 +5,7 @@ class CreateMenus < ActiveRecord::Migration
       t.text :description
       t.integer :store_id
       t.text :section_order
-
+      t.integer :hours_available_id
 
       t.timestamps
     end

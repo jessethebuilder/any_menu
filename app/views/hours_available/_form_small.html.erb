@@ -1,0 +1,24 @@
+<% DAYS.each do |day| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <!--<div class="form-inline">-->
+      <div class="form-group">
+        <% attr = "#{day}_open".to_sym %>
+        <%= f.label attr %><br>
+        <%= f.time_select attr, {:minute_step => 15, :ampm => true},
+                                 :class => '', :value => f.object.send(attr) %>
+      </div>
+      <!--</div>-->
+    </div>
+
+    <div class="col-sm-6">
+      <div>
+        <% attr = "#{day}_close".to_sym %>
+        <%= f.label attr %><br>
+        <%= f.time_select attr, {:minute_step => 15, :ampm => true},
+                                 :class => '', :value => f.object.send(attr) %>
+      </div>
+    </div>
+  </div>
+<% end %>
+

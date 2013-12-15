@@ -1,0 +1,11 @@
+<div id="menu_list">
+  <h2>Menus</h2>
+  <ul>
+    <% menus.each do |m| %>
+        <li>
+          <%= link_to m.name, edit_menu_path(m) %>
+        </li>
+    <% end %>
+  </ul>
+   <%= link_to 'Add Menu', new_menu_path, :class => 'btn btn-default' %>
+</div>

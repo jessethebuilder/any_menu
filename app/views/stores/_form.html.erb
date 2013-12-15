@@ -19,10 +19,12 @@
         <%= f.label :name, 'Store Name' %>
         <%= f.text_field :name, :class => 'form-control' %>
       </div>
+
       <div class="form_group">
         <%= f.label :description, 'Describe Your Store' %><br>
         <%= f.text_area :description, :class => 'form-control' %>
       </div>
+
       <div class="checkbox">
         <label>
           <%= f.check_box :delivers %> <strong>We offer delivery</strong>
@@ -33,50 +35,25 @@
         <%= f.label :sales_tax_rate %>
         <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
       </div>
+
+      <div>
+        <%= render :partial => 'menus/list', :locals => {:menus => @store.menus} unless @store.new_record? %>
+      </div>
     </div><!-- col -->
 
     <div class="col-md-4">
-      <%= f.fields_for @hours_available do |ha_fields| %>
-
-        <div class="row">
-
-          <div class="col-sm-6 form-group">
-            <div class="" style="display: inline;">
-              <%= ha_fields.label :sunday_open %>
-              <div class="input-group">
-                <%= ha_fields.text_field :sunday_open, :class => 'form-control dateselect-time' %>
-                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-sm-6 form-group">
-            <%= ha_fields.label :sunday_close %>
-
-            <div class="input-append bootstrap-timepicker">
-
-              <%= ha_fields.text_field :sunday_open, :class => 'input-small' %>
-              <span class="add-on"><i class="icon-time"></i></span>
-            </div>
-          </div>
-
-        </div>
-
-
+      <%= f.fields_for :hours_available do |ha_fields| %>
+        <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
       <% end %>
     </div><!--col-->
-  </div><!-- row -->
 
-  <div class="row">
-    <div class='col-md-12'>
-      <%= f.submit :class => 'btn btn-primary' %>
-    </div>
-  </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.submit :class => 'btn btn-primary' %>
+      </div>
+    </div><!--col-->
+
+  </div><!-- row -->
 <% end %>
 
 
-<script>
-    $('#store_hours_available_sunday_open').timepicker();
-</script>

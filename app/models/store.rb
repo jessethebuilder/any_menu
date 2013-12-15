@@ -1,4 +1,5 @@
 class Store < ActiveRecord::Base
+
   has_many :menus
 
   has_many :users
@@ -7,7 +8,7 @@ class Store < ActiveRecord::Base
 
   validates :sales_tax_rate, :numericality => { :greater_than_or_equal_to => 0 }
 
-  belongs_to :hours_available
+  belongs_to :hours_available, :dependent => :destroy
   validates :hours_available, :presence => true
   accepts_nested_attributes_for :hours_available
 
