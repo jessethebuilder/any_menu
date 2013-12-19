@@ -1,4 +1,16 @@
-<div class="container">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<style>
+  /*.notice{*/
+      /*font-size: 50px;*/
+      /*color: white;*/
+      /*background-color: black;*/
+  /*}*/
+</style>
+
+<div id="the_flash" class="container">
+  <% if alert %>
+    <h4 class="text-danger"><%= alert %></h4>
+  <% end %>
+  <% if notice %>
+    <h4 class="text-primary"><%= notice %></h4>
+  <% end %>
 </div>
