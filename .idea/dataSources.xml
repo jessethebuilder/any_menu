@@ -4,9 +4,7 @@
     <data-source source="LOCAL" name="Rails any_menu: development" uuid="b5ddc32e-e653-4981-ad61-471aaabd7158">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/any_menu_development</jdbc-url>
-      <user-name>postgres</user-name>
-      <user-password>dfc2dfdfdfc4dfdedfcfdfd8</user-password>
+      <jdbc-url>jdbc:postgresql:any_menu_development</jdbc-url>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
@@ -29,7 +27,6 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:any_menu_production</jdbc-url>
-      <user-name>any_menu</user-name>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>

@@ -18,22 +18,12 @@ development:
   adapter: postgresql
   encoding: unicode
   database: any_menu_development
-  host: localhost
-  port: 5432
+#  host: localhost
+#  port: 5432
   pool: 5
-  username: postgres
-  password: hunter
-
-
-  # Schema search path. The server defaults to $user,public
-  #schema_search_path: myapp,sharedapp,public
-
-  # Minimum log levels, in increasing order:
-  #   debug5, debug4, debug3, debug2, debug1,
-  #   log, notice, warning, error, fatal, and panic
-  # Defaults to warning.
-  #min_messages: notice
-
+  password:
+#  username: postgres
+#  password: hunter
 
 test:
   adapter: postgresql
@@ -49,7 +39,5 @@ production:
   adapter: postgresql
   encoding: unicode
   database: any_menu_production
-
   pool: 5
-  username: any_menu
   password:
