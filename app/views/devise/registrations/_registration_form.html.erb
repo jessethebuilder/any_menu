@@ -19,9 +19,8 @@
     <% if owner? || first_use? %>
       <div class="form-group">
         <%= f.label :user_type %>
-        <% first_use? ? selected = :owner : selected = :store_user %>
-        <%= f.select :user_type, array_for_select(USER_TYPES, selected), {}, {:class => 'form-control'} %>
-       </div>
+        <%= f.select :user_type, array_for_select(USER_TYPES, 'owner'), {}, {:class => 'form-control'} %>
+      </div>
     <% end %>
 
     <div class="form-group">
