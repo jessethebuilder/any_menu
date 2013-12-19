@@ -17,5 +17,7 @@ class Store < ActiveRecord::Base
     errors.add :id, 'Only 1 Store can exist' unless Store.all.empty?
   end
 
+  validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
+
 
 end

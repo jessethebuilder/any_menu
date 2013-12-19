@@ -19,6 +19,7 @@ FactoryGirl.define do
     name Faker::Company.bs
     sales_tax_rate Random.rand(0.0..15.0)
     hours_available
+    menu_package MENU_PACKAGES.sample
 
     factory :store_with_owner do
       after(:build) do |o|
@@ -48,6 +49,13 @@ FactoryGirl.define do
 
     factory :owner do
       user_type 'owner'
+
+      factory :owner_with_store do
+        after(:build) do |o|
+          store = create :store
+          store.user << o
+        end
+      end
     end
   end
 end

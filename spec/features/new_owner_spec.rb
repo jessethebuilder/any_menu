@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'new owner specs' do
-  let(:store){ create :store }
+  let(:store){ build :store }
 
   specify 'going to the root before the Store is saved goes to new_store_path AFTER a Devise sign-up request' do
     visit '/'
@@ -29,4 +29,6 @@ describe 'new owner specs' do
       page.should have_text("Store Tools")
     end
   end
+
+
 end

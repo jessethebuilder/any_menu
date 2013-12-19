@@ -6,6 +6,12 @@ module RequestHelper
     store
   end
 
+  def login_owner
+    owner = create :owner_with_store
+    login(owner)
+    owner
+  end
+
   def login(user)
     visit '/users/sign_in'
     fill_in 'Email', :with => user.email

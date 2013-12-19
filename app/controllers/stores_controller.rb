@@ -68,7 +68,7 @@ class StoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
-      params.require(:store).permit(:name, :description, :delivers, :sales_tax_rate,
+      params.require(:store).permit(:name, :description, :delivers, :sales_tax_rate, :menu_package,
                                     :hours_available_attributes => [:id, :sunday_open, :sunday_close, :monday_open, :monday_close,
                                                                     :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close,
                                                                     :thursday_open, :thursday_close, :friday_open, :friday_close,

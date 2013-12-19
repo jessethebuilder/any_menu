@@ -36,6 +36,11 @@
         <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
       </div>
 
+      <div class="form-group">
+        <%= f.label 'Menu Package' %>
+        <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
+      </div>
+
 
     </div><!-- col -->
 
