@@ -1,4 +1,10 @@
 AnyMenu::Application.routes.draw do
+
+  resources :hours_availables do
+    resources :exception_to_availabilities#, :only => [:new, :edit, :create, :update, :destroy]
+  end
+  #resources :exception_to_availabilities, :only => [:destroy]
+
   devise_for :users
   resources :topping_lists
 

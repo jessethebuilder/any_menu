@@ -34,6 +34,9 @@ group :doc do
 end
 
 gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
+gem 'twitter_express', :git => 'https://github.com/jessethebuilder/TwitterExpress'
+#gem 'twitter_express', :path => 'C:\Users\jf\Desktop\jesseweb\TwitterExpress'
+
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 

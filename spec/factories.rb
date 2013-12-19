@@ -10,10 +10,21 @@ FactoryGirl.define do
     end
   end
 
+  factory :exception_to_availability do
+    hours_available
+    name Faker::Commerce.color
+  end
+
   factory :store do
     name Faker::Company.bs
     sales_tax_rate Random.rand(0.0..15.0)
     hours_available
+
+    factory :store_with_owner do
+      after(:build) do |o|
+        o.users << build(:owner)
+      end
+    end
   end
 
   factory :menu do
@@ -36,7 +47,7 @@ FactoryGirl.define do
     user_type USER_TYPES.sample
 
     factory :owner do
-      user_type :owner
+      user_type 'owner'
     end
   end
 end

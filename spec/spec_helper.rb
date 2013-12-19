@@ -13,6 +13,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include ActionView::Helpers::NumberHelper
 
+
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
@@ -41,6 +42,9 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  require 'support/request_helper'
+  config.include RequestHelper
 
 
 end

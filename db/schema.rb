@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131206225915) do
+ActiveRecord::Schema.define(version: 20131215033559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exception_to_availabilities", force: true do |t|
+    t.string   "name"
+    t.integer  "hours_available_id"
+    t.datetime "open"
+    t.datetime "close"
+    t.boolean  "reoccurring"
+    t.boolean  "changing_dates"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "hours_availables", force: true do |t|
     t.datetime "sunday_open"
