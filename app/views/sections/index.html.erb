@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="text-center">Sections</h1>
+  <% @sections.each do |s| %>
+    <div class="row">
+      <div class="col-md-3">
+        <strong><%= link_to s.name, edit_section_path(s) %></strong>
+      </div>
+      <div class="col-md-3">
+        <%= menu_list(s) %>
+      </div>
+    </div>
+  <% end %>
+</div>

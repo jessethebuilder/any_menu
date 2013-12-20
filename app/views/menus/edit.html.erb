@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Edit <%= link_to @menu.name, @menu %></h1>
+  <h1>Edit <strong><%= @menu.name %></strong>
+  <small><%= link_to '(return to store)', edit_store_path(store) %></small></h1>
 
   <%= render 'form' %>
 </div>

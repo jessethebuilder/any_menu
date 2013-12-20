@@ -20,4 +20,6 @@ describe 'editing menus' do
     click_link 'Delete Menu'
     Menu.where(:id => id).empty?.should be_true
   end
+
+
 end

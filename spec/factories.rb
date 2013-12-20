@@ -32,8 +32,17 @@ FactoryGirl.define do
     name Faker::Company.bs
     after(:build)do |o|
       o.store = build :store
-      o.hours_available = build :hours_available
+      #o.hours_available = build :hours_available
     end
+
+    factory :menu_with_section do
+      after(:create) do |menu|
+        section = create(:section)
+        menu.sections << section
+      end
+    end
+
+
   end
 
   factory :section do
@@ -53,7 +62,7 @@ FactoryGirl.define do
       factory :owner_with_store do
         after(:build) do |o|
           store = create :store
-          store.user << o
+          store.users << o
         end
       end
     end

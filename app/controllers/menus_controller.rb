@@ -15,11 +15,9 @@ class MenusController < ApplicationController
   # GET /menus/new
   def new
     @menu = Menu.new
-    #@menu.build_hours_available
     @menu.hours_available = Store.first.hours_available.dup
   end
 
-  # GET /menus/1/edit
   def edit
 
   end
@@ -28,7 +26,7 @@ class MenusController < ApplicationController
     @menu = Menu.new(menu_params)
 
     respond_to do |format|
-      if @menu.save!
+      if @menu.save
         format.html { redirect_to edit_menu_path(@menu), notice: 'Menu was successfully created.' }
       else
         format.html { render action: 'new' }

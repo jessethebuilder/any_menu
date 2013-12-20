@@ -5,7 +5,7 @@
 
         <div class="col-md-6">
           <div class="col-sm-4">
-            <%= menu.name %>
+            <%= link_to menu.name, edit_menu_path(menu) %>
           </div>
           <div class="col-sm-8">
             <small><%= menu.description %></small>
@@ -13,10 +13,7 @@
         </div>
 
         <div class="col-md-6">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-3">
-            <%= link_to 'Edit', edit_menu_path(menu), :class => 'btn btn-default' %>
-          </div>
+
           <div class="col-sm-3">
             <%= link_to 'Show', menu, :class => 'btn btn-info' %>
           </div>

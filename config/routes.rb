@@ -13,10 +13,15 @@ AnyMenu::Application.routes.draw do
 
   resources :items
 
-  resources :sections #, :only => [:show]
+  resources :sections
 
   resources :menus do
-    resources :sections, :only => [:new, :create, :edit, :update]
+    resources :sections, :only => [:new, :create, :edit, :update] do
+      member do
+        get 'add'
+      end
+      resources :items
+    end
   end
 
   resources :sectionalizations, :only => [:destroy]

@@ -1,4 +1,4 @@
-<%= form_for @section do |f| %>
+<%= form_for @form_target do |f| %>
    <% if @section.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@section.errors.count, "error") %> prohibited this store from being saved:</h2>
@@ -12,7 +12,7 @@
 
 
 
-  <%= f.hidden_field :id_for_menu %>
+
 
   <!-- todo this needs an option to add an existing section to this menu. Maybe in new.html.erb-->
   <div class="row">
@@ -28,27 +28,36 @@
       </div>
 
 
-    </div><!--col-->
-
-
-    <div class="col-md-4">
-
       <div class="form-group">
-        <%= f.submit :class => 'btn btn-primary' %>
+        <%= f.submit :class => 'btn btn-primary form-control' %>
       </div>
 
       <% unless @section.new_record? %>
-        <%= link_to 'Delete Section', @section, :method => :delete, :class => 'btn btn-danger',
-            :data => { :confirm => 'This will PERMANENTLY delete this section from ALL MENUS. Are you sure?' }%>
+
 
         <% if @sectionalization %>
-
+          <div class  ="form-group">
+            <%= link_to 'Remove Section', sectionalization_path(@sectionalization), :method => :delete,
+                            :class => 'btn btn-warning form-control',
+                            :data => {:confirm => 'This will remove this section from this menu only. Are you sure?'} %>
+          </div>
         <% end %>
+        <div class="form-group">
+          <%= link_to 'Delete Section', @section, :method => :delete, :class => 'btn btn-danger form-control',
+                    :data => { :confirm => 'This will PERMANENTLY delete this section from ALL MENUS. Are you sure?' }%>
+        </div>
       <% end %>
-
-
     </div><!--col-->
 
-
+    <% if @other_sections %>
+      <div class="col-md-4">
+        <h3>Add an existing Section</h3>
+          <ul>
+            <% @other_sections.each do |sec| %>
+              <li><%= link_to sec.name, add_menu_section_path(@menu, sec) %></li>
+            <% end %>
+          </ul>
+      </div><!--col-->
+    <% end %>
   </div><!--row-->
 <% end %>

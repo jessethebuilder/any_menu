@@ -1,13 +1,20 @@
 <div id="section_list">
   <h2>Sections</h2>
-  <ul>
-    <% sections.each do |s| %>
-        <li>
-          <%= link_to s.name, edit_menu_section_path(@menu, s) %>
 
-          <%= link_to 'remove', sectionalization_path(s.sectionalization(@menu)), :method => :delete %>
-        </li>
-    <% end %>
-  </ul>
-  <%= link_to 'Add Section', new_menu_section_path(@menu), :class => 'btn btn-default' %>
+  <% sections.each do |s| %>
+      <div class="row">
+        <div class="col-xs-6">
+          <li>
+            <%= link_to s.name, edit_menu_section_path(@menu, s) %>
+          </li>
+        </div>
+        <div class="col-xs-4 offset-xs-2">
+          <%= link_to 'remove', sectionalization_path(s.sectionalization(@menu)), :method => :delete,
+                                :class => 'text-danger',
+                                :data => {:confirm => 'This will remove this section from this menu only. Are you sure?'}%>
+        </div>
+      </div>
+  <% end %>
+
+  <%= link_to 'Add Section', new_menu_section_path(@menu), :class => 'btn btn-default form-control' %>
 </div>
