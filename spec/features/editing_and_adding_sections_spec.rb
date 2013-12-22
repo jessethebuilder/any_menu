@@ -27,8 +27,6 @@ describe 'editing and adding sections' do
     end
   end
 
-
-
   describe 'adding section from edit_menu' do
     specify 'adding a section' do
       menu.save!
@@ -38,9 +36,10 @@ describe 'editing and adding sections' do
       end
       fill_in 'Name', :with => 'Test Section'
       click_button 'Create Section'
-      page.should have_content 'Edit Test Section'
 
-      click_link '(return to menu)'
+      page.should have_content 'Edit Section: Test Section'
+
+      click_link "(return to #{menu.name})"
       within '#section_list' do
         page.should have_content 'Test Section'
       end
@@ -67,22 +66,6 @@ describe 'editing and adding sections' do
       menu.sections << section
       visit edit_section_path(section, menu)
       expect{ click_link "Delete Section" }.to change{ Section.count }.by(-1)
-    end
-  end
-
-  describe 'removing a section from a menu' do
-    specify 'removing a section from menu_edit' do
-      menu.save!
-      menu.sections << section
-      Sectionalization.where(:menu_id => menu.id).where(:section_id => section.id).empty?.should be_false
-
-      visit edit_menu_path(menu)
-      within('#section_list') do
-        click_link 'remove'
-      end
-
-      Sectionalization.where(:menu_id => menu.id).where(:section_id => section.id).empty?.should be_true
-      section.destroyed?.should be_false
     end
   end
 

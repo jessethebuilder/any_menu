@@ -8,13 +8,29 @@
             <%= link_to s.name, edit_menu_section_path(@menu, s) %>
           </li>
         </div>
-        <div class="col-xs-4 offset-xs-2">
-          <%= link_to 'remove', sectionalization_path(s.sectionalization(@menu)), :method => :delete,
-                                :class => 'text-danger',
-                                :data => {:confirm => 'This will remove this section from this menu only. Are you sure?'}%>
+
+        <div class="col-xs-1 offset-xs-1">
+          <% unless s == sections.last %>
+          <%= link_to '<span class="glyphicon glyphicon-chevron-down"></span>'.html_safe,
+                       move_menu_section_path(@menu, s, :velocity => 1) %>
+          <% end %>
+        </div>
+
+        <div class="col-xs-1">
+          <% unless s == sections.first %>
+          <%= link_to '<span class="glyphicon glyphicon-chevron-up"></span>'.html_safe,
+                       move_menu_section_path(@menu, s, :velocity => -1) %>
+          <% end %>
+        </div>
+
+        <div class="col-xs-2 offset-xs-1">
+          <%= link_to 'remove', remove_menu_section_path(@menu, s),
+                      :class => 'text-danger',
+                      :data => {:confirm => 'This will remove this section from this menu only. Are you sure?'}%>
         </div>
       </div>
   <% end %>
-
-  <%= link_to 'Add Section', new_menu_section_path(@menu), :class => 'btn btn-default form-control' %>
+  <div class="form-group">
+    <%= link_to 'Add Section', new_menu_section_path(@menu), :class => 'btn btn-success form-control' %>
+  </div>
 </div>

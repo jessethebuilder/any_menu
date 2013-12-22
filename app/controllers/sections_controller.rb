@@ -1,11 +1,26 @@
 class SectionsController < ApplicationController
-  before_action :set_section, only: [:show, :edit, :update, :destroy, :add]
-  before_action :set_menu, :only => [:new, :edit, :create, :update, :destroy, :add]
+  include ActionView::Helpers::UrlHelper
 
+  before_action :set_section, only: [:show, :edit, :update, :destroy, :add, :remove, :move]
+  before_action :set_menu, :only => [:new, :edit, :create, :update, :destroy, :add, :remove, :move]
+
+  # add, remove, move #######################################################
   def add
     @menu.sections << @section
     redirect_to edit_menu_path(@menu)
   end
+
+  def remove
+    @menu.sections.delete(@section)
+    redirect_to edit_menu_path(@menu)
+  end
+
+  def move
+    velocity = params[:velocity]
+    @menu.move_section(@section, velocity)
+    redirect_to edit_menu_path(@menu)
+  end
+  # add, remove, move #######################################################
 
   def index
     @sections = Section.all
@@ -24,7 +39,11 @@ class SectionsController < ApplicationController
       if @section.save
         @menu.sections << @section if @menu
         format.html do
-          redirect_to after_create_path, :notice => 'Section was successfully created.'
+          if @menu
+            redirect_to edit_menu_section_path(@menu, @section), :notice => 'Section was successfully created.'
+          else
+            redirect_to edit_section_path(@section), :notice => 'Section was successfully created.'
+          end
         end
       else
         set_form_target
@@ -35,16 +54,17 @@ class SectionsController < ApplicationController
 
   def edit
     set_form_target
-    if params[:menu_id]
-      @sectionalization = Sectionalization.where(:section_id => @section.id).where(:menu_id => params[:menu_id]).first
-    end
   end
 
   def update
     respond_to do |format|
       if @section.update(section_params)
         format.html do
-          redirect_to after_update_path, :notice => "#{@section.name} was successfully updated."
+          if @menu
+            redirect_to edit_menu_path(@menu), :notice => "#{@section.name} was successfully updated."
+          else
+            redirect_to sections_path, :notice => "#{@section.name} was successfully updated."
+          end
         end
       else
         set_form_target
@@ -60,32 +80,17 @@ class SectionsController < ApplicationController
     else
       redirect_to sections_path
     end
-
   end
 
   private
 
-  def after_update_path
-    if @menu
-      edit_menu_path(@menu)
-    else
-      sections_path
-    end
-  end
-
-  def after_create_path
-    if @menu
-      edit_menu_section_path(@menu, @section)
-    else
-      edit_section_path(@section)
-    end
-  end
-
   def set_form_target
     if @menu
       @form_target = [@menu, @section]
+      @link_back = link_to("(return to #{@menu.name})", edit_menu_path(@menu)).html_safe
     else
       @form_target = @section
+      @link_back = link_to("(return to Sections)", sections_path).html_safe
     end
   end
 

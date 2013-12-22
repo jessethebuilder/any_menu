@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit <strong><%= @section.name %></strong>
-  <small><%= link_to '(return to menu)', edit_menu_path(@menu) if @menu %></small></h1>
+  <h1>Edit Section: <strong><%= @section.name %></strong>
+  <small><%= @link_back %></small></h1>
   <%= render :partial => 'form' %>
 </div>

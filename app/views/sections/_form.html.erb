@@ -10,12 +10,13 @@
     </div>
   <% end %>
 
-
-
-
-
-  <!-- todo this needs an option to add an existing section to this menu. Maybe in new.html.erb-->
   <div class="row">
+    <% unless @section.new_record? %>
+    <div class="col-md-4">
+      <%= render :partial => 'items/item_list', :locals => {:items => @section.ordered_items} %>
+    </div><!--col-->
+    <% end %>
+
     <div class="col-md-4">
       <div class="form-group">
         <%= f.label :name %>
@@ -35,9 +36,9 @@
       <% unless @section.new_record? %>
 
 
-        <% if @sectionalization %>
+        <% if @menu %>
           <div class  ="form-group">
-            <%= link_to 'Remove Section', sectionalization_path(@sectionalization), :method => :delete,
+            <%= link_to 'Remove Section', remove_menu_section_path(@menu, @section),
                             :class => 'btn btn-warning form-control',
                             :data => {:confirm => 'This will remove this section from this menu only. Are you sure?'} %>
           </div>

@@ -2,6 +2,7 @@ include ApplicationHelper
 
 FactoryGirl.define do
   sequence(:email){ |i| "test#{i}@test.com"}
+  sequence(:name){ |i| "#{Faker::Company.name}_#{i}"}
 
   factory :hours_available do
     factory :hours_available_with_sunday do
@@ -12,14 +13,17 @@ FactoryGirl.define do
 
   factory :exception_to_availability do
     hours_available
-    name Faker::Commerce.color
+    name
   end
 
   factory :store do
-    name Faker::Company.bs
+    name
     sales_tax_rate Random.rand(0.0..15.0)
-    hours_available
     menu_package MENU_PACKAGES.sample
+
+    after(:build) do |o|
+      o.hours_available = build(:hours_available)
+    end
 
     factory :store_with_owner do
       after(:build) do |o|
@@ -29,7 +33,7 @@ FactoryGirl.define do
   end
 
   factory :menu do
-    name Faker::Company.bs
+    name
     after(:build)do |o|
       o.store = build :store
       #o.hours_available = build :hours_available
@@ -41,12 +45,16 @@ FactoryGirl.define do
         menu.sections << section
       end
     end
+  end
 
-
+  factory :item do
+    name
+    section
+    cost Random.rand(0.0..100.0)
   end
 
   factory :section do
-    name Faker::Company.bs
+    name
   end
 
 

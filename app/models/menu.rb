@@ -1,6 +1,38 @@
 class Menu < ActiveRecord::Base
+  #add, move, remove ########################################################
+  serialize :section_order, Array
   has_many :sectionalizations, :dependent => :destroy
-  has_many :sections, :through => :sectionalizations
+  has_many :sections, :through => :sectionalizations, :after_add => :add_to_section_order,
+           :after_remove => :remove_from_section_order
+
+  def add_to_section_order(section)
+    section_order = read_attribute(:section_order)
+    section_order << section.to_param
+    self.update(:section_order => section_order)
+  end
+
+  def remove_from_section_order(section)
+    section_order = read_attribute(:section_order)
+    section_order.delete(section.to_param)
+    self.update(:section_order => section_order)
+  end
+
+  def move_section(section, velocity)
+    section_order = read_attribute(:section_order)
+    from_index = section_order.index(section.to_param)
+    section_order.move!(from_index, from_index + Integer(velocity))
+    self.update(:section_order => section_order)
+  end
+
+  def ordered_sections
+    query = sections
+    arr = []
+    section_order.each do |s|
+      arr << query.where(:id => s).first
+    end
+    arr
+  end
+  #add, move, remove ########################################################
 
   belongs_to :store
   validates :store, :presence => true
@@ -16,4 +48,8 @@ class Menu < ActiveRecord::Base
     s2 = Section.joins('LEFT OUTER JOIN sectionalizations on sections.id = sectionalizations.section_id').where('sectionalizations.section_id IS NULL')
     s1 + s2
   end
+
+
+
+
 end

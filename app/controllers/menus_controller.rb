@@ -1,19 +1,19 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
 
-  # GET /menus
-  # GET /menus.json
   def index
     @menus = Menu.all
   end
 
-  # GET /menus/1
-  # GET /menus/1.json
   def show
   end
 
-  # GET /menus/new
   def new
+    #todo add active menu logic
+    if Menu.count > 0 && Store.first.menu_package == 'single_menu'
+      redirect_to :back, :notice => 'Multiple menus are not available yet. Coming soon.'
+    end
+
     @menu = Menu.new
     @menu.hours_available = Store.first.hours_available.dup
   end

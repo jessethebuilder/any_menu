@@ -11,20 +11,36 @@ AnyMenu::Application.routes.draw do
   resources :toppings
 
 
-  resources :items
 
-  resources :sections
+
+  resources :sections do
+    resources :items do
+      member do
+        get 'remove'
+        get 'add'
+        get 'move'
+      end
+    end
+  end
 
   resources :menus do
     resources :sections, :only => [:new, :create, :edit, :update] do
       member do
+        get 'remove'
         get 'add'
+        get 'move'
       end
-      resources :items
+      resources :items do
+        member do
+          get 'remove'
+          get 'add'
+          get 'move'
+        end
+      end
     end
   end
 
-  resources :sectionalizations, :only => [:destroy]
+  #resources :sectionalizations, :only => [:destroy]
 
 
 

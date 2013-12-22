@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'new owner specs' do
-  let(:store){ build :store }
+  #let(:store){ build :store }
 
   specify 'going to the root before the Store is saved goes to new_store_path AFTER a Devise sign-up request' do
     visit '/'
@@ -22,6 +22,7 @@ describe 'new owner specs' do
     User.first.user_type.should == 'owner'
     fill_in 'Store Name', :with => Faker::Company.bs
     fill_in 'Sales tax rate', :with => Random.rand(0.0..15.0)
+
     click_button 'Create Store'
 
     within('#top_nav') do

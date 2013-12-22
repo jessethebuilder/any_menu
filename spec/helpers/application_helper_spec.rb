@@ -42,4 +42,10 @@ describe ApplicationHelper do
       pending
     end
   end
+
+  describe '#current_menu' do
+    # returns store.current_menu, but is the goto helper for current_menu for future expansion.
+  end
+
+
 end

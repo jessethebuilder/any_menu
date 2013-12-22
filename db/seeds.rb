@@ -19,13 +19,18 @@ s.menus << m
 m.save!
 #m.hours_available = hours.dup
 3.times do
-  sec = Section.new :name => Faker::Commerce.color, :description => Faker::Lorem.paragraph(sentence_count = 1)
+  sec = Section.new :name => Faker::Commerce.color.titlecase, :description => Faker::Lorem.paragraph(sentence_count = 1)
   sec.save!
+    10.times do
+      i = Item.new :name => Faker::Company.bs.titlecase, :cost => Random.rand(0..200.0)
+      sec.items << i
+    end
   m.sections << sec
 end
+m.save!
 
 3.times do
-  free_section = Section.new :name => Faker::Commerce.color, :description => Faker::Lorem.paragraph(sentence_count = 1)
+  free_section = Section.new :name => Faker::Commerce.color.titlecase, :description => Faker::Lorem.paragraph(sentence_count = 1)
   free_section.save!
 end
 

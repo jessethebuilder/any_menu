@@ -29,7 +29,8 @@ module ApplicationHelper
     r
   end
 
-
   ::USER_TYPES = ['customer', 'owner', 'store_user']
   ::MENU_PACKAGES = ['single_menu']
 end
+
+

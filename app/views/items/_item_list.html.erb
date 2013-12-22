@@ -1,0 +1,40 @@
+<div id="item_list">
+  <h2>Items</h2>
+
+  <% items.each do |i| %>
+      <div class="row">
+        <div class="col-xs-6">
+          <li>
+            <%= link_to i.name, edit_menu_section_item_path(@menu, @section, i) %>
+          </li>
+        </div>
+
+        <div class="col-xs-1 offset-xs-1">
+          <% unless i == items.last %>
+              <%= link_to '<span class="glyphicon glyphicon-chevron-down"></span>'.html_safe,
+                          move_menu_section_item_path(@menu, @section, i, :velocity => 1) %>
+          <% end %>
+        </div>
+
+        <div class="col-xs-1">
+          <% unless i == items.first %>
+              <%= link_to '<span class="glyphicon glyphicon-chevron-up"></span>'.html_safe,
+                          move_menu_section_item_path(@menu, @section, i, :velocity => -1) %>
+          <% end %>
+        </div>
+
+        <div class="col-xs-2 offset-xs-1">
+          <%= link_to 'remove', remove_menu_section_item_path(@menu, @section, i),
+                      :class => 'text-danger',
+                      :data => {:confirm => 'This will remove this item from this section on the menu. Are you sure?'}%>
+        </div>
+      </div>
+  <% end %>
+  <div class="form-group">
+    <% if @menu %>
+      <%= link_to 'Add Item', new_menu_section_item_path(@menu, @section), :class => 'btn btn-success form-control' %>
+    <% else %>
+      <%= link_to 'Add Item', new_section_item_path(@section), :class => 'btn btn-success form-control' %>
+    <% end %>
+  </div>
+</div>

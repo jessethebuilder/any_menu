@@ -1,37 +1,56 @@
-<%= form_for(@item) do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<div class="row">
+  <%= form_for @form_target do |f| %>
+    <% if @item.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+  
+        <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="col-md-4">  
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
 
-      <ul>
-      <% @item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, :class => 'form-control' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :tax_exempt %><br>
-    <%= f.check_box :tax_exempt %>
-  </div>
-  <div class="field">
-    <%= f.label :dont_deliver %><br>
-    <%= f.check_box :dont_deliver %>
-  </div>
-  <div class="field">
-    <%= f.label :topping_list_id %><br>
-    <%= f.number_field :topping_list_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="form-group">
+        <%= f.label :cost %>
+        <%= f.text_field :cost, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :tax_exempt %> Item is tax exempt
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :dont_deliver %> Not available for delivery
+          </label>
+        </div>
+      </div>
+
+      <!--<div class="form-group">-->
+        <!--<%= f.label :topping_list_id %>-->
+        <!--<%= f.number_field :topping_list_id %>-->
+      <!--</div>-->
+      <div class="form-group">
+        <%= f.submit :class => 'btn btn-primary form-control' %>
+      </div>
+    <% end %>
+  </div><!--col-->
+</div><!--row-->  
