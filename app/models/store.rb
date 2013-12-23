@@ -1,5 +1,4 @@
 class Store < ActiveRecord::Base
-
   has_many :menus
 
   has_many :users
@@ -10,7 +9,7 @@ class Store < ActiveRecord::Base
 
   belongs_to :hours_available, :dependent => :destroy
   #todo Following line MUST be uncommented and specs pass.
-  #validates :hours_available, :presence => true
+  validates :hours_available, :presence => true
   accepts_nested_attributes_for :hours_available
 
   validate :only_1_store, :on => :create
