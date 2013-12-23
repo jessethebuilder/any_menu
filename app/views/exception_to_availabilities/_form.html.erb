@@ -1,0 +1,57 @@
+<%= form_for([@hours_available, @exception_to_availability]) do |f| %>
+  <% if @exception_to_availability.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exception_to_availability.errors.count, "error") %> prohibited this exception from being saved:</h2>
+
+      <ul>
+      <% @exception_to_availability.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :hours_available_id, :value => @hours_available.id %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :open %><br>
+    <%= f.datetime_select :open, {:ampm => true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :close %><br>
+    <%= f.datetime_select :close, {:ampm => true}%>
+  </div>
+  <div class="form-group">
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :reoccurring %> Reoccurring?
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Schedule Closure', :class => 'btn btn-primary' %>
+  </div>
+
+  <div class="form-group">
+    <%= link_to 'Back', @hours_available.path_back, :class => 'btn btn-default' %>
+  </div>
+
+  <% unless @exception_to_availability.new_record? %>
+    <%= link_to 'Delete', hours_available_exception_to_availability_path(@hours_available, @exception_to_availability),
+                          :method => :delete, :class => 'btn btn-danger',
+                          :data => {:confirm => 'This will PERMANENTLY DELETE this Scheduled Closure. Are you sure?'} %>
+  <% end %>
+<% end %>
+
+<script>
+
+    <!--<% @exception_to_availability.errors.messages.each do |k, v| %>-->
+     <!--<%= j "$('exception_to_availability_#{k}').addClass('has_error');" %>-->
+    <!--<% end %>-->
+
+</script>
