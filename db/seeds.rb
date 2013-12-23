@@ -1,5 +1,3 @@
-require 'faker'
-
 u = User.new(:email => 'test@test.com', :password => 'testtest', :user_type => 'owner')
 u.save
 
