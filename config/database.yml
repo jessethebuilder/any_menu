@@ -21,9 +21,9 @@ development:
 #  host: localhost
 #  port: 5432
   pool: 5
-#  password:
-  username: postgres
-  password: hunter
+  password:
+#  username: postgres
+#  password: hunter
 
 test:
   adapter: postgresql
