@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <div class="row item">
   <div class="col-md-6">
     <h4>
@@ -17,7 +13,7 @@
       <strong><%= number_to_currency(item.cost) %></strong>
     </div><!--col-->
 
-    <%= form_for OrderItem.new do |f| %>
+    <%= form_for new_order_item do |f| %>
     <%= f.hidden_field :item_id, :value => item.id %>
 
     <div class="col-sm-4 col-sm-offset-1">

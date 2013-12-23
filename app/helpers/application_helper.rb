@@ -29,6 +29,10 @@ module ApplicationHelper
     r
   end
 
+  def new_order_item
+    OrderItem.new
+  end
+
   ::USER_TYPES = ['customer', 'owner', 'store_user']
   ::MENU_PACKAGES = ['single_menu']
 end
