@@ -20,5 +20,13 @@ class Store < ActiveRecord::Base
 
   validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
 
+   def open?
+     self.hours_available.open?
+   end
 
+   def current_menu
+     #menu selection goes through this method.
+     #currently, only 1 menu is allowed, so this is easy.
+     open? ? self.menus.first : nil
+   end
 end

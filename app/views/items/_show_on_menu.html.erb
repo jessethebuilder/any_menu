@@ -1,0 +1,39 @@
+<style>
+
+</style>
+
+<div class="row item">
+  <div class="col-md-6">
+    <h4>
+      <%= item.name %>
+      <small>
+        <%= item.description %>
+      </small>
+    </h4>
+  </div><!--col-->
+
+  <div class="col-md-6">
+    <div class="col-sm-2 col-sm-offset-1">
+      <strong><%= number_to_currency(item.cost) %></strong>
+    </div><!--col-->
+
+    <%= form_for OrderItem.new do |f| %>
+    <%= f.hidden_field :item_id, :value => item.id %>
+
+    <div class="col-sm-4 col-sm-offset-1">
+      <div class="form-group">
+        <%= f.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
+      </div>
+    </div><!--col-->
+
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
+      </div>
+    </div><!--col-->
+
+
+    <% end %>
+  </div><!--col-->
+</div><!--container-->
+

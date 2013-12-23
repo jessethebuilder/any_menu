@@ -1,5 +1,15 @@
 class MenusController < ApplicationController
+  include ApplicationHelper
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
+
+  def current
+    if store.current_menu
+      redirect_to menu(store.current_menu)
+    else
+      redirect_to '/'
+      #todo what to do if store is closed??
+    end
+  end
 
   def index
     @menus = Menu.all

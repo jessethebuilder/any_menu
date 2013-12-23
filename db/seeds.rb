@@ -9,7 +9,7 @@ s = Store.new(:name => Faker::Company.name,
 hours = HoursAvailable.new
 DAYS.each do |day|
   hours.send("#{day}_open=", "9:00AM")
-  hours.send("#{day}_close=", "9:00PM")
+  hours.send("#{day}_close=", "9:00AM")
 end
 s.hours_available = hours
 s.save!
@@ -22,7 +22,9 @@ m.save!
   sec = Section.new :name => Faker::Commerce.color.titlecase, :description => Faker::Lorem.paragraph(sentence_count = 1)
   sec.save!
     10.times do
-      i = Item.new :name => Faker::Company.bs.titlecase, :cost => Random.rand(0..200.0)
+      i = Item.new :name => Faker::Company.bs.titlecase,
+                   :cost => Random.rand(0..200.0),
+                   :description => Faker::Lorem.paragraph(sentence_count =1)
       sec.items << i
     end
   m.sections << sec

@@ -5,8 +5,15 @@ class HoursAvailable < ActiveRecord::Base
 
   def open?(datetime = Time.now)
     day = day_of_week(datetime).downcase
-    if self.send("#{day}_open")
-      datetime >= time_to_today(self.send("#{day}_open")) && datetime <= time_to_today(self.send("#{day}_close"))
+    open = send("#{day}_open")
+    close = send("#{day}_close")
+    if open
+      if format_time(open) == format_time(close)
+        #open 24 hours if open and close time are the same
+        true
+      else
+        datetime >= time_to_today(open) && datetime <= time_to_today(close)
+      end
     else
       false
     end

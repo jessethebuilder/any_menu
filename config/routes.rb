@@ -1,5 +1,9 @@
 AnyMenu::Application.routes.draw do
 
+  resources :orders
+
+  resources :order_items
+
   resources :hours_availables do
     resources :exception_to_availabilities#, :only => [:new, :edit, :create, :update, :destroy]
   end
@@ -9,9 +13,6 @@ AnyMenu::Application.routes.draw do
   resources :topping_lists
 
   resources :toppings
-
-
-
 
   resources :sections do
     resources :items do
@@ -24,6 +25,10 @@ AnyMenu::Application.routes.draw do
   end
 
   resources :menus do
+    collection do
+      #get 'current'
+    end
+
     resources :sections, :only => [:new, :create, :edit, :update] do
       member do
         get 'remove'
@@ -41,8 +46,6 @@ AnyMenu::Application.routes.draw do
   end
 
   #resources :sectionalizations, :only => [:destroy]
-
-
 
   resources :stores
 

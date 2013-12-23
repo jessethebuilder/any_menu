@@ -10,7 +10,15 @@ class StoresController < ApplicationController
   # GET /stores.json
   def index
     if store
-      redirect_to store_path(store)
+      if super_user?
+        redirect_to edit_store_path(store)
+      else
+        if store.current_menu
+          redirect_to menu_path(store.current_menu)
+        else
+          redirect_to menus_path, :alert => "#{store.name} is currently closed."
+        end
+      end
     else
       redirect_to new_store_path
     end

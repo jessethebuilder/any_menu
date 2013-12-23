@@ -1,19 +1,12 @@
-<p id="notice"><%= notice %></p>
+<style>
 
-<p>
-  <strong>Name:</strong>
-  <%= @menu.name %>
-</p>
+</style>
 
-<p>
-  <strong>Description:</strong>
-  <%= @menu.description %>
-</p>
-
-<p>
-  <strong>Store:</strong>
-  <%= @menu.store_id %>
-</p>
-
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+<div class="container menu">
+  <h1 class="text-center"><strong><%= @menu.name %><br>
+    <small><%= @menu.description %></small></strong></h1>
+  <hr>
+  <% @menu.sections.each do |s| %>
+    <%= render :partial => 'sections/show_on_menu', :locals => {:section => s, :menu => @menu} %>
+  <% end %>
+</div>

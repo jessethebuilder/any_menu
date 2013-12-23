@@ -25,29 +25,31 @@ describe Store do
 
   end
 
-  describe '#current_menu' do
-    before(:each) do
-      4.times.each do
-        m = create :menu
-        store.menus << m
-      end
-      menu = Menu.first
-      menu.active = true
-      menu.save!
-
-      store.hours_available = create(:hours_with_sunday)
-      store.save!
-    end
-
-    it 'return the menu that is set to active, IF the store is open' do
-      Timecop.freeze(2013, 12, 15)
-      store.current_menu.should == Menu.first
-    end
-
-    it 'return nil IF the store is closed' do
-      Timecop.freeze(2013, 12, 17)
-      store.current_menu.should be_nil
-    end
-
-  end
+  #describe '#current_menu' do
+  #  before(:each) do
+  #    4.times.each do
+  #      m = create :menu
+  #      store.menus << m
+  #    end
+  #    store.hours_available = create(:hours_available_with_sunday)
+  #    store.save!
+  #  end
+  #
+  #  #it 'return the menu that is set to active, IF the store is open' do
+  #  #  Timecop.freeze(2013, 12, 15)
+  #  #  store.current_menu.should == Menu.first
+  #  #end
+  #
+  #  #it 'return nil IF the store is closed' do
+  #  #  Timecop.freeze(2013, 12, 17)
+  #  #  store.current_menu.should be_nil
+  #  #end
+  #
+  #  describe 'if menu_package is single_menu' do
+  #    it 'should be the first menu created' do
+  #      store.current_menu.should == Menu.first
+  #    end
+  #  end
+  #
+  #end
 end

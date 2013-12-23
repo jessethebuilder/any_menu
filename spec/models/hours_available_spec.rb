@@ -23,8 +23,18 @@ describe HoursAvailable do
     end
 
     it 'should work with a nil value' do
+      #the 16th is a monday, which is set to nil
       Timecop.freeze(Time.local(2013, 12, 16, 10, 0))
       hours.open?.should be_false
+    end
+
+    it 'should always be open all day if hours_open and hours_closed is the same' do
+      hours.sunday_open = "12:00AM"
+      hours.sunday_close = "12:00AM"
+      10.times do
+        Timecop.freeze(Time.local(2013, 12, 15, Random.rand(0..23), Random.rand(0..59)))
+        hours.open?.should be_true
+      end
     end
   end
 
