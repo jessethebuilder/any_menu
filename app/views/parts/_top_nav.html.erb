@@ -4,7 +4,7 @@
     }
 </style>
 
-<div id='top_nav' class='navbar navbar-default navbar-fixed-top' role='navigation'>
+<div id='top_nav' class='navbar navbar-default navbar-fixed-top navbar-inverse' role='navigation'>
   <div class="container">
     <div class='navbar-header'>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top_nav_body">
@@ -18,6 +18,11 @@
 
     <div id='top_nav_body' class='collapse navbar-collapse'>
       <ul class='nav navbar-nav navbar-right'>
+        <% if current_order? %>
+          <li>
+            <%= link_to 'Review Order', review_order_path(current_order), :remote => true %>
+          </li>
+        <% end %>
 
         <% if super_user? %>
           <li classs="dropdown">

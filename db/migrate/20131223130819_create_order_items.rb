@@ -3,7 +3,7 @@ class CreateOrderItems < ActiveRecord::Migration
     create_table :order_items do |t|
       t.integer :order_id
       t.integer :item_id
-      t.float :price
+      t.float :cost
       t.integer :quantity
 
       t.timestamps

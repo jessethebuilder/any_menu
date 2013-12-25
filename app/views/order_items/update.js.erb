@@ -1,0 +1,1 @@
+$('#order_item_<%= @order_item.id %>_total').replaceWith("<%= j render :partial => 'order_item_total', :locals => {:order_item => @order_item} %>");

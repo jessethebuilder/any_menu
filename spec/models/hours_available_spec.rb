@@ -7,6 +7,10 @@ describe HoursAvailable do
   let(:hours_available){ build :hours_available }
   let(:store){ build :store }
 
+  after(:each) do
+    Timecop.return
+  end
+
   #describe 'validations' do
   #  it 'should RAISE an error if a record is saved without an '
   #end

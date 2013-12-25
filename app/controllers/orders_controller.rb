@@ -1,5 +1,13 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy, :review, :complete]
+
+  def review
+
+  end
+
+  def complete
+
+  end
 
   # GET /orders
   # GET /orders.json
@@ -28,8 +36,12 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        @order.order_items << OrderItem.new(params[:order][:order_item_attributes])
+        #session[:order_item_id] = @order.id
+
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render action: 'show', status: :created, location: @order }
+        format.js{ redirect_to :back }
       else
         format.html { render action: 'new' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
@@ -44,6 +56,7 @@ class OrdersController < ApplicationController
       if @order.update(order_params)
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
+        format.js{ redirect_to :back}
       else
         format.html { render action: 'edit' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
@@ -69,6 +82,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user_id)
+      params.require(:order).permit(:user_id, :order_item_attributes => [:id, :cost, :item_id, :order_id, :quantity])
     end
 end

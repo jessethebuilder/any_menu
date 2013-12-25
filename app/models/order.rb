@@ -1,6 +1,7 @@
 class Order < ActiveRecord::Base
   belongs_to :user
-  validates_presence_of :user
 
-  has_many :order_items
+  has_many :order_items, :dependent => :delete_all
+  accepts_nested_attributes_for :order_items, :allow_destroy => true
+
 end

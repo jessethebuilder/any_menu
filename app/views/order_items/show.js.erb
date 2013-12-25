@@ -1,0 +1,9 @@
+<%= express_modal 'Order', nil, true do %>
+<ol>
+<% @order.order_items.each do |i| %>
+    <li>
+    <%= ". #{i.item.name} - #{i.quantity} - #{i.item_total}" %>
+    </li>
+<% end %>
+</ol>
+<% end %>

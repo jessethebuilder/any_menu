@@ -1,4 +1,4 @@
-<div class="row item">
+<div id="item_<%= item.id %>" class="row item">
   <div class="col-md-6">
     <h4>
       <%= item.name %>
@@ -13,23 +13,23 @@
       <strong><%= number_to_currency(item.cost) %></strong>
     </div><!--col-->
 
-    <%= form_for new_order_item do |f| %>
-    <%= f.hidden_field :item_id, :value => item.id %>
 
-    <div class="col-sm-4 col-sm-offset-1">
-      <div class="form-group">
-        <%= f.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
-      </div>
-    </div><!--col-->
+    <%= form_for OrderItem.new, :remote => true do |oi| %>
+      <%= oi.hidden_field :item_id, :value => item.id %>
+      <%= oi.hidden_field :cost, :value => item.cost %>
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class="form-group">
+          <%= oi.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
+        </div>
+      </div><!--col-->
 
-    <div class="col-sm-4">
-      <div class="form-group">
-        <%= f.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
-      </div>
-    </div><!--col-->
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= oi.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
+        </div>
+      </div><!--col-->
 
-
-    <% end %>
+    <% end %><!--Order form-->
   </div><!--col-->
 </div><!--container-->
 

@@ -1,6 +1,9 @@
 module ApplicationHelper
   include HtmlTools
 
+  ::USER_TYPES = ['customer', 'owner', 'store_user']
+  ::MENU_PACKAGES = ['single_menu']
+
   def store
     Store.first
   end
@@ -29,12 +32,34 @@ module ApplicationHelper
     r
   end
 
-  def new_order_item
-    OrderItem.new
+  def current_order
+    if user_signed_in?
+      #current_user.orders.where(:complete => false).last || current_user.orders.new()
+    else
+      current_order_for_unknown_user
+    end
   end
 
-  ::USER_TYPES = ['customer', 'owner', 'store_user']
-  ::MENU_PACKAGES = ['single_menu']
+  def current_order?
+    if user_signed_in?
+
+    else
+      session[:current_order_id] && Order.exists?(session[:current_order_id])
+    end
+  end
+
+  private
+
+  def current_order_for_unknown_user
+    if current_order?
+      Order.find(session[:current_order_id])
+    else
+      order = Order.create
+      session[:current_order_id] = order.id
+      order
+    end
+  end
+
 end
 
 

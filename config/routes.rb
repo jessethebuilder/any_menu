@@ -1,6 +1,11 @@
 AnyMenu::Application.routes.draw do
 
-  resources :orders
+  resources :orders do
+    member do
+      get 'review'
+      get 'complete'
+    end
+  end
 
   resources :order_items
 

@@ -1,4 +1,5 @@
 class OrderItemsController < ApplicationController
+  include ApplicationHelper
   before_action :set_order_item, only: [:show, :edit, :update, :destroy]
 
   # GET /order_items
@@ -27,12 +28,14 @@ class OrderItemsController < ApplicationController
     @order_item = OrderItem.new(order_item_params)
 
     respond_to do |format|
-      if @order_item.save
+      if current_order.order_items << @order_item
         format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
         format.json { render action: 'show', status: :created, location: @order_item }
+        format.js
       else
         format.html { render action: 'new' }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -44,6 +47,7 @@ class OrderItemsController < ApplicationController
       if @order_item.update(order_item_params)
         format.html { redirect_to @order_item, notice: 'Order item was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: 'edit' }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }
@@ -54,10 +58,11 @@ class OrderItemsController < ApplicationController
   # DELETE /order_items/1
   # DELETE /order_items/1.json
   def destroy
+    @id_to_destroy = @order_item.id
     @order_item.destroy
     respond_to do |format|
       format.html { redirect_to order_items_url }
-      format.json { head :no_content }
+      format.js
     end
   end
 
@@ -69,6 +74,6 @@ class OrderItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_item_params
-      params.require(:order_item).permit(:order_id, :price, :quantity, :item_id)
+      params.require(:order_item).permit(:order_id, :cost, :quantity, :item_id)
     end
 end

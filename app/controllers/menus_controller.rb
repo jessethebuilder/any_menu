@@ -16,6 +16,7 @@ class MenusController < ApplicationController
   end
 
   def show
+    #@order = current_order
   end
 
   def new

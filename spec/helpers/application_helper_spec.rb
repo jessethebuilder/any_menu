@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
-  let(:my_store){ create :store }
+  let(:my_store){ build :store }
   let(:user){ create :user }
 
   describe '#store' do
@@ -47,5 +47,7 @@ describe ApplicationHelper do
     # returns store.current_menu, but is the goto helper for current_menu for future expansion.
   end
 
+  describe '#current_order' do
 
+  end
 end

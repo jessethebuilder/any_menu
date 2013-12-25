@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   validates :user_type, :presence => true, :inclusion => { :in => USER_TYPES }
   DeviseController
 
-
+  has_many :orders
 end
