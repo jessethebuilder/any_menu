@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ApplicationHelper do
   let(:my_store){ build :store }
-  let(:user){ create :user }
+  let(:users){ create :users }
 
   describe '#store' do
     it 'should return the first and only store in the db' do

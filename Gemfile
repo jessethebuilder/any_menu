@@ -42,6 +42,7 @@ gem 'twitter_express', :git => 'https://github.com/jessethebuilder/TwitterExpres
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 
 gem 'devise'
+gem 'geocoder'
 
 group :test, :development do
   gem 'faker'

@@ -2,11 +2,14 @@ module ApplicationHelper
   include HtmlTools
 
   ::USER_TYPES = ['customer', 'owner', 'store_user']
+  ::DINING_LOCATIONS = %w|deliver dine_in take_out|
   ::MENU_PACKAGES = ['single_menu']
 
   def store
     Store.first
   end
+
+
 
   def store_name
     Store.first ? Store.first.name : 'Any Menu Template'

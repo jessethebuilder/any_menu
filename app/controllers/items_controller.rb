@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-   before_action :set_item_and_section
+  include ActionView::Helpers::UrlHelper
+
+  before_action :set_item_and_section
   before_action :set_menu
   #before_action :set_section, :only => [:new, :edit]
 

@@ -13,7 +13,6 @@
       <strong><%= number_to_currency(item.cost) %></strong>
     </div><!--col-->
 
-
     <%= form_for OrderItem.new, :remote => true do |oi| %>
       <%= oi.hidden_field :item_id, :value => item.id %>
       <%= oi.hidden_field :cost, :value => item.cost %>

@@ -17,11 +17,20 @@ class Store < ActiveRecord::Base
     errors.add :id, 'Only 1 Store can exist' unless Store.all.empty?
   end
 
+  has_one :address, :as => :addressable
+
   validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
 
-   def open?
-     self.hours_available.open?
-   end
+  def dining_location_options
+    arr = ['take_out']
+    arr << 'delivery' if self.delivers?
+    arr << 'dine_in' if self.dine_in?
+    arr
+  end
+
+  def open?
+    self.hours_available.open?
+  end
 
    def current_menu
      #menu selection goes through this method.

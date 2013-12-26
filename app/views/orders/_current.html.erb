@@ -1,0 +1,5 @@
+<li id="current_order">
+  <% if current_order? %>
+    <%= link_to 'Review Order', review_order_path(current_order), :remote => true %>
+  <% end %>
+</li>

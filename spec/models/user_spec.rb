@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  let(:user){ create :user }
+  let(:users){ create :users }
   let(:owner){ create :owner }
 
   describe 'validations' do

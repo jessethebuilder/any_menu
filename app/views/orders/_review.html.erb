@@ -1,55 +1,66 @@
-
-
-
-<%= express_modal 'Your Order', nil, true do %>
-  <style>
+<style>
     .order_item_row{
         /*border-bottom: 2px dotted rgba(128, 128, 128, 0.47);*/
         /*border-bottom: 1px dashed rgba(128, 128, 128, 0.47);*/
         padding-top: 5px;
-        padding-bottom: 15px;
+        /*padding-bottom: 15px;*/
     }
-  </style>
+</style>
 
-  <% @order.order_items.order(:id).each do |oi| %>
-    <%= form_for oi, :remote => true do |f| %>
-      <div id="order_item_<%= oi.id %>" class="row order_item_row">
-        <div class="col-sm-4">
-          <strong>
-            <%= oi.item.name %>
-          </strong>
-        </div>
 
-        <div class="col-sm-2">
-          <div class="form-group">
-            <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
-          </div>
-        </div>
 
-        <div class="col-sm-4">
-          <%#= f.text_area :note, :class => 'form-control', :placeholder => 'note..' %>
+<%= express_modal 'Your Order', nil, true do %>
+  <%#= render :partial => 'order_items/list', :locals => {:order_items => @order.order_items} %>
 
-        </div>
-        <div class="col-sm-2">
-          <div id="<%= "order_item_#{oi.id}_total" %>">
-            <%= number_to_currency(oi.item_total) %>
-          </div>
-          <br>
-          <%= link_to 'remove', order_item_path(oi), :remote => true, :method => :delete, :class => 'btn btn-danger btn-xs' %>
-        </div>
-        <!--todo handle orphand orders -->
-      <!--<hr>-->
-      </div><!--row-->
-    <% end %><!--form-->
-  <% end %><!--loop-->
+
+    <% @order.order_items.order(:id).each do |oi| %>
+        <%= form_for oi, :remote => true do |f| %>
+            <div id="order_item_<%= oi.id %>" class="row order_item_row">
+              <div class="col-sm-6">
+                <strong>
+                  <%= oi.item.name %>
+                </strong>
+              </div><!--col-->
+
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
+                </div>
+              </div><!--col-->
+
+              <div class="col-sm-2">
+                <div id="<%= "order_item_#{oi.id}_total" %>">
+                  <%= number_to_currency(oi.item_total) %>
+                </div>
+              </div><!--col-->
+
+              <div class="col-md-2">
+                <%= link_to 'remove', order_item_path(oi), :remote => true, :method => :delete, :class => 'btn btn-danger btn-xs' %>
+              </div>
+            </div><!--row-->
+        <% end %><!--form-->
+    <% end %><!--loop-->
+
+
+    <script>
+        $('.updates_quantity').on('change', function(e){
+//      $(this).parent('form').submit;
+            $(e.target).closest('form').submit();
+        })
+    </script>
+
+
+
+
+
 
   <div class="form-group">
     <%= link_to 'Complete Order', complete_order_path(@order), :class => 'btn btn-primary form-control' %>
   </div>
 
-  <script>
-    $('.updates_quantity').on('change', function(e){
-      $(e.target).closest('form').submit();
-    })
-  </script>
+  <div class="form-group">
+    <%= link_to 'Destroy Order', order_path(@order), :method => :delete, :remote => true,
+                                :class => 'btn btn-default form-control',
+                                :data => {:confirm => 'This will DESTROY your order FOREVER. Are you sure?'}%>
+  </div>
 <% end %>

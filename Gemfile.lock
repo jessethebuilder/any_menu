@@ -89,6 +89,7 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.3-x86-mingw32)
     formatador (0.2.4)
+    geocoder (1.1.9)
     guard (2.2.5)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -122,11 +123,17 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     nokogiri (1.6.1-x86-mingw32)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.3)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     pry (0.9.12.4-x86-mingw32)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -239,6 +246,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   farm_tools!
+  geocoder
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails

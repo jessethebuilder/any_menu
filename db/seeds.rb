@@ -4,7 +4,8 @@ u.save
 s = Store.new(:name => Faker::Company.name,
               :description => Faker::Lorem.paragraph(sentence_count = 2),
               :sales_tax_rate => Random.rand(0.0..15.0),
-              :menu_package => 'single_menu'
+              :menu_package => 'single_menu',
+              :delivers => true
              )
 hours = HoursAvailable.new
 DAYS.each do |day|

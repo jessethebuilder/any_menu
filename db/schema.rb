@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131225055304) do
+ActiveRecord::Schema.define(version: 20131226033815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: true do |t|
+    t.string   "name"
+    t.string   "street"
+    t.string   "street2"
+    t.string   "apartment_number"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "exception_to_availabilities", force: true do |t|
     t.string   "name"
@@ -97,8 +113,12 @@ ActiveRecord::Schema.define(version: 20131225055304) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "completed",  default: false
-    t.boolean  "paid",       default: false
+    t.boolean  "completed",       default: false
+    t.boolean  "paid",            default: false
+    t.string   "dining_location"
+    t.text     "note"
+    t.string   "contact_name"
+    t.string   "contact_phone"
   end
 
   create_table "sectionalizations", force: true do |t|
@@ -125,6 +145,7 @@ ActiveRecord::Schema.define(version: 20131225055304) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "menu_package"
+    t.boolean  "dine_in"
   end
 
   create_table "topping_lists", force: true do |t|
@@ -160,6 +181,8 @@ ActiveRecord::Schema.define(version: 20131225055304) do
     t.integer  "store_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

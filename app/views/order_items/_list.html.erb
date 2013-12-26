@@ -1,0 +1,44 @@
+<style>
+    .order_item_row{
+        /*border-bottom: 2px dotted rgba(128, 128, 128, 0.47);*/
+        /*border-bottom: 1px dashed rgba(128, 128, 128, 0.47);*/
+        padding-top: 5px;
+        /*padding-bottom: 15px;*/
+    }
+</style>
+
+<% order_items.order(:id).each do |oi| %>
+  <%= form_for oi, :remote => true do |f| %>
+    <div id="order_item_<%= oi.id %>" class="row order_item_row">
+      <div class="col-sm-6">
+        <strong>
+          <%= oi.item.name %>
+        </strong>
+      </div><!--col-->
+
+      <div class="col-sm-2">
+        <div class="form-group">
+          <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
+        </div>
+      </div><!--col-->
+
+      <div class="col-sm-2">
+        <div id="<%= "order_item_#{oi.id}_total" %>">
+          <%= number_to_currency(oi.item_total) %>
+        </div>
+      </div><!--col-->
+
+      <div class="col-md-2">
+        <%= link_to 'remove', order_item_path(oi), :remote => true, :method => :delete, :class => 'btn btn-danger btn-xs' %>
+      </div>
+    </div><!--row-->
+  <% end %><!--form-->
+<% end %><!--loop-->
+
+
+<script>
+    $('.updates_quantity').on('change', function(e){
+//      $(this).parent('form').submit;
+       $(e.target).closest('form').submit();
+    })
+</script>

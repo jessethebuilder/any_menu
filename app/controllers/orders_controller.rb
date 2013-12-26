@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def complete
-
+    @user = current_user || User.new
   end
 
   # GET /orders
@@ -71,6 +71,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to orders_url }
       format.json { head :no_content }
+      format.js
     end
   end
 
@@ -82,6 +83,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user_id, :order_item_attributes => [:id, :cost, :item_id, :order_id, :quantity])
+      params.require(:order).permit(:user_id, :order_item_attributes => [:id, :cost, :item_id, :order_id, :quantity,
+                                                                         :contact_name, :contact_phone])
     end
 end

@@ -1,5 +1,7 @@
 AnyMenu::Application.routes.draw do
 
+  resources :addresses
+
   resources :orders do
     member do
       get 'review'

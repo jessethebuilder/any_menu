@@ -6,7 +6,7 @@ class OrderItem < ActiveRecord::Base
   validates :item, :presence => true
 
   belongs_to :order
-  #validates :order, :presence => true
+  validates :order, :presence => true
 
   validates :cost, :presence => true, :numericality => {:greater_than_or_equal_to => 0}
 
@@ -16,7 +16,7 @@ class OrderItem < ActiveRecord::Base
   end
 
   def item_total
-    item.cost * quantity
+    cost * quantity
   end
 
 end

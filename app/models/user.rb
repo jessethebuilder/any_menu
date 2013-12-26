@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
   DeviseController
 
   has_many :orders
+
+  has_many :addresses, :as => :addressable
 end

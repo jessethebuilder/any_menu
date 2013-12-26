@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <div class="row">
+    <div class="form-group">
+      <%= f.label :name, 'Contact name' %>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :phone, 'Phone <small>We may need to contact you regarding this order.</small>'.html_safe %>
+      <%= f.phone_field :phone %>
+    </div>
+
+
+  </div><!--row-->
+<% end %>

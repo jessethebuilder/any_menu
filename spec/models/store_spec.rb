@@ -3,6 +3,17 @@ require 'spec_helper'
 describe Store do
   let(:store){ build :store }
 
+  describe '#dining_location_options' do
+    it 'should differ depending on boolean values of store.delivers and store.dine_in' do
+      store.dining_location_options.should == ['take_out']
+      expect{ store.delivers = true }.to change{ store.dining_location_options.count }.by(1)
+      store.dining_location_options.include?('delivery').should be_true
+      expect{ store.dine_in = true }.to change{ store.dining_location_options.count }.by(1)
+      store.dining_location_options.include?('dine_in').should be_true
+      expect{ store.delivers = false }.to change{ store.dining_location_options.count }.by(-1)
+    end
+  end
+
   describe 'validation' do
     it{ should validate_presence_of :name }
     it{ should validate_numericality_of :sales_tax_rate }
@@ -21,6 +32,7 @@ describe Store do
       store.valid?.should be_false
       store.errors[:sales_tax_rate].include?("must be greater than or equal to 0").should be_true
     end
+
 
 
   end

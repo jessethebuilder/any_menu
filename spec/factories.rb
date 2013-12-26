@@ -113,7 +113,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :user do
+  factory :users do
     email
     password 'testtest'
     user_type USER_TYPES.sample

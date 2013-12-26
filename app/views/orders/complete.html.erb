@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Complete Order
+  <small><%= link_to '(return to menu)', menu_path(store.current_menu) %></small></h1>
+
+  <%= render 'form' %>
+</div>
+
+<script>
+  function hideCurrentOrder(){
+    $('#current_order').detach();
+  }
+
+  $(document).ready(hideCurrentOrder());
+  $(document).on('page:load', hideCurrentOrder());
+</script>

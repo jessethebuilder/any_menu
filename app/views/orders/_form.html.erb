@@ -1,15 +1,61 @@
 <%= form_for(@order) do |f| %>
-    <% if @order.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
-          <ul>
-            <% @order.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+      <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :dining_location %>
+        <%= f.select :dining_location, array_for_select(store.dining_location_options), {}, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :note, 'Order notes' %>
+        <%= f.text_area :note, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :contact_name %>
+        <% if user_signed_in? %>
+          <%= f.text_field :contact_name, :class => 'form-control', :value => current_user.name %>
+      <% else %>
+          <%= f.text_field :contact_name, :class => 'form-control' %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :contact_phone, 'Phone <small>(we many need to call you)</small>'.html_safe %>
+        <% if user_signed_in? %>
+            <%= f.phone_field :contact_phone, :class => 'form-control', :value => current_user.phone %>
+        <% else %>
+            <%= f.phone_field :contact_phone, :class => 'form-control' %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+
+    </div><!--col-->
+
+    <div class="col-md-8 well">
+      <%= render :partial => 'order_items/list', :locals => {:order_items => @order.order_items} %>
+    </div><!--col-->
+  </div><!--row-->
 
 <% end %>
+

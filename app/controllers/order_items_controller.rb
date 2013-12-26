@@ -29,7 +29,7 @@ class OrderItemsController < ApplicationController
 
     respond_to do |format|
       if current_order.order_items << @order_item
-        format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
+        format.html { redirect_to  }
         format.json { render action: 'show', status: :created, location: @order_item }
         format.js
       else
