@@ -5,7 +5,8 @@ FactoryGirl.define do
   sequence(:name){ |i| "#{Faker::Company.name}_#{i}"}
 
   factory :order do
-
+    contact_phone Faker::PhoneNumber.phone_number
+    contact_name Faker::Name.name
   end
 
   factory :order_item do
@@ -41,6 +42,8 @@ FactoryGirl.define do
   factory :exception_to_availability do
     hours_available
     name
+    close Time.now
+    open Time.now + 1.day
   end
 
   factory :store do
@@ -65,11 +68,11 @@ FactoryGirl.define do
       end
     end
 
-    factory :store_with_owner do
-      after(:build) do |o|
-        o.users << build(:owner)
-      end
-    end
+    #factory :store_with_owner do
+    #  after(:build) do |o|
+    #    o.users << build(:owner)
+    #  end
+    #end
   end #end store
 
   factory :menu do
@@ -113,7 +116,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :users do
+  factory :user do
     email
     password 'testtest'
     user_type USER_TYPES.sample
@@ -128,13 +131,6 @@ FactoryGirl.define do
 
     factory :owner do
       user_type 'owner'
-
-      factory :owner_with_store do
-        after(:build) do |o|
-          store = create :store
-          store.users << o
-        end
-      end
     end
   end
 end

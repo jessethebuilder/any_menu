@@ -1,13 +1,13 @@
 <%- if controller_name != 'sessions' %>
   <div class='form-group'>
-    <%= link_to "Sign in", new_session_path(resource_name), :class => 'btn btn-default' %>
+    <%= link_to "Sign in", new_session_path(resource_name), :class => 'btn btn-default form-control' %>
   </div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <div class="form-group">
 
-    <%= link_to "Sign up", new_registration_path(resource_name), :class => 'btn btn-default' %>
+    <%= link_to "Sign up", new_registration_path(resource_name), :class => 'btn btn-success form-control' %>
   </div>
 <% end -%>
 

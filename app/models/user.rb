@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :user_type, :presence => true, :inclusion => { :in => USER_TYPES }
+
   DeviseController
 
   has_many :orders

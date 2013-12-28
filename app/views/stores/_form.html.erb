@@ -1,19 +1,7 @@
 <%= form_for(@store) do |f| %>
-  <% if @store.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@store.errors.count, "error") %> prohibited this store from being saved:</h2>
-
-      <ul>
-      <% @store.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render :partial => 'parts/error_explanation', :locals => {:object => @store} %>
 
   <div class="row">
-
-
     <div class="col-md-4">
       <div class="form-group">
         <%= render :partial => 'menus/list', :locals => {:menus => @store.menus} unless @store.new_record? %>
@@ -21,30 +9,30 @@
     </div><!--col-->
 
     <div class="col-md-4">
-
+      <h2>Options</h2>
       <div class="form-group">
-        <%= f.label :name, 'Store Name' %>
+        <%= f.label :name, 'Store Name', :class => 'control-label' %>
         <%= f.text_field :name, :class => 'form-control' %>
       </div>
 
       <div class="form_group">
-        <%= f.label :description, 'Describe Your Store' %><br>
+        <%= f.label :description, 'Describe Your Store', :class => 'control-label' %><br>
         <%= f.text_area :description, :class => 'form-control' %>
       </div>
 
       <div class="checkbox">
-        <label>
+        <label class='control-label'>
           <%= f.check_box :delivers %> <strong>We offer delivery</strong>
         </label>
       </div>
 
       <div class="form-group">
-        <%= f.label :sales_tax_rate %>
+        <%= f.label :sales_tax_rate, :class => 'control-label' %>
         <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label 'Menu Package' %>
+        <%= f.label 'Menu Package', :class => 'control-label' %>
         <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
       </div>
 

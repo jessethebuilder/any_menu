@@ -22,7 +22,7 @@ class MenusController < ApplicationController
   def new
     #todo add active menu logic
     if Menu.count > 0 && Store.first.menu_package == 'single_menu'
-      redirect_to :back, :notice => 'Multiple menus are not available yet. Coming soon.'
+      redirect_to '/', :notice => 'Multiple menus are not available yet. Coming soon.'
     end
 
     @menu = Menu.new

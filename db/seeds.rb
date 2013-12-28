@@ -1,4 +1,4 @@
-u = User.new(:email => 'test@test.com', :password => 'testtest', :user_type => 'owner')
+u = User.new(:email => 'info@any-menu.com', :password => 'testtest', :user_type => 'owner')
 u.save
 
 s = Store.new(:name => Faker::Company.name,

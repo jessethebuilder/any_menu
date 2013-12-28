@@ -10,7 +10,13 @@ describe 'Hours Available Requests' do
       click_link 'Schedule Closure'
     end
     fill_in 'Name', :with => Faker::Commerce.color
-    expect{ click_button 'Schedule Closure' }.to change{ ExceptionToAvailability.count }.by(1)
+
+    fill_in_date_time('exception_to_availability_close', Time.now + 1.day)
+    fill_in_date_time('exception_to_availability_open', Time.now + 2.days)
+
+    #expect{ click_button 'Schedule Closure' }.to change{ ExceptionToAvailability.count }.by(1)
+    click_button "Schedule Closure"
+
     #should redirect back to menu or store that was being edited
     page.current_path.should == edit_store_path(store)
     new_exception = ExceptionToAvailability.last
@@ -30,6 +36,11 @@ describe 'Hours Available Requests' do
     #doesn't save because of validation errors
     test_name = Faker::Commerce.color
     fill_in 'Name', :with => test_name
+
+
+    fill_in_date_time('exception_to_availability_close', Time.now + 1.day)
+    fill_in_date_time('exception_to_availability_open', Time.now + 2.days)
+
     click_button 'Schedule Closure'
     exception = ExceptionToAvailability.where(:name => test_name).first
     exception.hours_available.should == store.hours_available

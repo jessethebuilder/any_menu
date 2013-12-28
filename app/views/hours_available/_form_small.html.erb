@@ -1,21 +1,23 @@
 <div class="hours_available">
   <% DAYS.each do |day| %>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-xs-12">
         <div class="form-group">
           <% attr = "#{day}_open".to_sym %>
-          <%= f.label attr %><br>
-          <%= f.time_select attr, {:minute_step => 15, :ampm => true},
-                                   :class => '', :value => f.object.send(attr) %>
+          <%= f.label attr, :class => 'control-label' %>
+          <div class="form-inline">
+            <%= f.time_select attr, {:minute_step => 15, :ampm => true},
+                                   :class => 'form-control', :value => f.object.send(attr) %>
+          </div>
         </div>
-      </div><!--col-->
 
-      <div class="col-sm-6">
         <div class="form-group">
           <% attr = "#{day}_close".to_sym %>
-          <%= f.label attr %><br>
-          <%= f.time_select attr, {:minute_step => 15, :ampm => true},
-                                   :class => '', :value => f.object.send(attr) %>
+          <%= f.label attr, :class => 'control-label' %>
+          <div class="form-inline">
+            <%= f.time_select attr, {:minute_step => 15, :ampm => true},
+                                     :class => 'form-control', :value => f.object.send(attr) %>
+          </div>
         </div>
       </div><!--col-->
     </div><!--row-->
@@ -42,7 +44,7 @@
       <div class="col-sm-12">
         <div class="form-group">
           <%= link_to 'Schedule Closure', new_hours_available_exception_to_availability_path(f.object),
-                      :class => 'btn btn-default form-control' %>
+                      :class => 'btn btn-success form-control' %>
         </div>
       </div><!--row-->
     </div><!--col-->

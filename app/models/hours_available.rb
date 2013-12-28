@@ -3,6 +3,23 @@ class HoursAvailable < ActiveRecord::Base
   has_many :stores
   has_many :exception_to_availabilities
 
+  validate :closes_are_after_opens
+private
+  def closes_are_after_opens
+    DAYS.each do |day|
+      open = "#{day}_open".to_sym
+      close = "#{day}_close".to_sym
+
+      if read_attribute(open)
+        if read_attribute(close) < read_attribute(open)
+          errors.add close, "cannot be before #{day.titlecase} open"
+          errors.add open, "cannot be after #{day.titlecase} close"
+        end
+      end
+    end
+  end
+public
+
   def open?(datetime = Time.now)
     day = day_of_week(datetime).downcase
     open = send("#{day}_open")
@@ -26,7 +43,7 @@ class HoursAvailable < ActiveRecord::Base
   def availability_exception?(datetime)
     exceptions = ExceptionToAvailability.where(:hours_available_id => self.id)
     exceptions.each do |ex|
-      return true if datetime >= ex.open && datetime <= ex.close
+      return true if datetime >= ex.close && datetime <= ex.open
     end
     false
   end

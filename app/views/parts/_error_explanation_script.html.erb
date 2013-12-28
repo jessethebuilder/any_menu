@@ -1,0 +1,14 @@
+<script>
+    $(window).load(function(){
+        $('.field_with_errors').addClass('has-error');
+
+        <% object.errors.each do |k, v| %>
+        $('#<%= "#{object.class.name.underscore}_#{k}" %>').parent('div').append(errorMessage('<%= v %>'));
+        $('#<%= "#{object.class.name.underscore}_#{k}_1i" %>').parent('div').append(errorMessage('<%= v %>'));
+        <% end %>
+    })
+
+    function errorMessage(message){
+        return '<span class="help-block text-danger text-center">' + message + '</span>';
+    }
+</script>

@@ -3,7 +3,7 @@ class Address < ActiveRecord::Base
 
   validates :name, :presence => true
 
-  geocode_by :address_for_geocode
+  geocoded_by :address_for_geocode
 
   def address_for_geocode
     str = "#{street} " if street

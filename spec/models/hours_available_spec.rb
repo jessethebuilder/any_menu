@@ -11,9 +11,17 @@ describe HoursAvailable do
     Timecop.return
   end
 
-  #describe 'validations' do
-  #  it 'should RAISE an error if a record is saved without an '
-  #end
+  describe 'Validations' do
+    it "validates that a day's opening is before or equal to a day's close" do
+      hours_available.sunday_close = Time.parse('15-12-2013-8:59am')
+      hours_available.sunday_open = Time.parse('15-12-2013-9:00am')
+      hours_available.valid?.should be_false
+      hours_available.errors[:sunday_close].should include("cannot be before Sunday open")
+      hours_available.errors[:sunday_open].should include("cannot be after Sunday close")
+      hours_available.sunday_close = Time.parse('15-12-2013-9:00am')
+      hours_available.should be_valid
+    end
+  end
 
   describe '#open?' do
     it 'should return true if current time is between day_open and day_close' do
@@ -46,9 +54,9 @@ describe HoursAvailable do
     it 'should return false if any ExceptionToAvailability on this HoursAvailable has been set on the datetime param' do
       eta = ExceptionToAvailability.new(:name => Faker::Commerce.color)
       eta.hours_available = hours
-      eta.open = Time.local(2013, 12, 15)
-      eta.close = Time.local(2013, 12, 16)
-      eta.save!
+      eta.close = Time.local(2013, 12, 15)
+      eta.open = Time.local(2013, 12, 16)
+      eta.save(:validate => false)
 
       Timecop.freeze(Time.local(2013, 12, 15))
       hours.availability_exception?(Time.now).should be_true

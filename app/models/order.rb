@@ -6,6 +6,9 @@ class Order < ActiveRecord::Base
 
   has_one :address, :as => :addressable
 
+  validates :contact_phone, :presence => true
+  validates :contact_name, :presence => true
+
   validate :all_delivery_items_deliverable
   private
   def all_delivery_items_deliverable

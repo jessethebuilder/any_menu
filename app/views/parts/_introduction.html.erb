@@ -1,0 +1,34 @@
+<div id="introduction" class="row">
+
+  <style>
+      #introduction{
+          border-radius: 10px;
+          -moz-border-radius: 10px;
+          border: solid 4px #242424;
+          padding: 20px;
+          font-size: 16px;
+      }
+  </style>
+
+  <button id="close_introduction" type="button" class="close" aria-hidden="true">&times;</button>
+  <br><br>
+  Any-menu is a affordable system that allows restaurants to easily put their menu online and start receiving orders today.
+  Any-menu is equally accessible from phones, tables, and computers. It is a very simple system that any restaurant owner can use.
+  <br><br>
+  If you would like to use the menu/store editing features, <strong>log in as user: info@any-menu.com pw: testtest</strong>,
+  to check out those features.
+  <br><br>
+  The current layout is intentionally sparse, but this system is customizable to your specifications.
+  <br><br>
+  If you would like to modernize your ordering system, and you think Any-menu work for you, please give us call anytime:
+  <br><br>
+  Jesse Farmer<br>
+  360-670-9312<br>
+  <%= mail_to 'info@any-menu.com' %>
+
+  <script>
+    $(document).click('#close_introduction', function(){
+        $('#introduction').hide(300);
+    })
+  </script>
+</div>

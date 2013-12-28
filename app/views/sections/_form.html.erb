@@ -1,16 +1,7 @@
-<%= form_for @form_target do |f| %>
-   <% if @section.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@section.errors.count, "error") %> prohibited this store from being saved:</h2>
-      <ul>
-        <% @section.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="row">
+  <%= form_for @form_target do |f| %>
+    <%= render :partial => 'parts/error_explanation', :locals => {:object => @section} %>
 
-  <div class="row">
     <% unless @section.new_record? %>
     <div class="col-md-4">
       <%= render :partial => 'items/item_list', :locals => {:items => @section.ordered_items} %>
@@ -19,12 +10,12 @@
 
     <div class="col-md-4">
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label :name, :class => 'control-label' %>
         <%= f.text_field :name, :class => 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :description %>
+        <%= f.label :description, :class => 'control-label' %>
         <%= f.text_area :description, :class => 'form-control'%>
       </div>
 
@@ -60,5 +51,5 @@
           </ul>
       </div><!--col-->
     <% end %>
-  </div><!--row-->
-<% end %>
+  <% end %>
+</div><!--row-->

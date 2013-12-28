@@ -1,57 +1,45 @@
 <div class="row">
   <%= form_for(@menu) do |f| %>
-    <% if @menu.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+    <%= render :partial => 'parts/error_explanation', :locals => {:object => @menu} %>
 
-        <ul>
-        <% @menu.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
+    <%= f.hidden_field :store_id, :value => store.id %>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= render :partial => 'sections/list', :locals => {:sections => @menu.ordered_sections} unless @menu.new_record? %>
       </div>
-    <% end %>
+    </div><!--col-->
 
-      <%= f.hidden_field :store_id, :value => store.id %>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :name, :class => 'control-label' %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <%= render :partial => 'sections/list', :locals => {:sections => @menu.ordered_sections} unless @menu.new_record? %>
-        </div>
-      </div><!--col-->
+      <div class="form-group">
+        <%= f.label :description, :class => 'control-label' %>
+        <%= f.text_area :description, :class => 'form-control' %>
+      </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <%= f.label :name %>
-          <%= f.text_field :name, :class => 'form-control' %>
-        </div>
+      <div class="form-group">
+        <%= f.submit :class => 'btn btn-primary form-control' %>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :description %>
-          <%= f.text_area :description, :class => 'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.submit :class => 'btn btn-primary form-control' %>
-        </div>
-
-        <% unless @menu.new_record? %>
-        <div class="form-group">
-          <%= link_to 'Delete Menu', @menu, :method => :delete, :class => 'btn btn-danger form-control',
-                      :data => { :confirm => 'This will delete this Menu PERMANENTLY. Are you sure?' }%>
-        </div>
-        <% end %>
-      </div><!--col-->
-
-      <% unless store.menu_package == 'single_menu' %>
-      <div class="col-md-4">
-        <h2>Hours of Operation</h2>
-        <%= f.fields_for :hours_available do |ha_fields| %>
-            <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
-        <% end %>
+      <% unless @menu.new_record? %>
+      <div class="form-group">
+        <%= link_to 'Delete Menu', @menu, :method => :delete, :class => 'btn btn-danger form-control',
+                    :data => { :confirm => 'This will delete this Menu PERMANENTLY. Are you sure?' }%>
       </div>
       <% end %>
+    </div><!--col-->
 
-    </row>
+    <% unless store.menu_package == 'single_menu' %>
+    <div class="col-md-4">
+      <h2>Hours of Operation</h2>
+      <%= f.fields_for :hours_available do |ha_fields| %>
+        <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
+      <% end %>
+    </div>
+    <% end %>
   <% end %><!--form-->
 </div><!--row-->
