@@ -26,7 +26,6 @@ class OrderItemsController < ApplicationController
   # POST /order_items.json
   def create
     @order_item = OrderItem.new(order_item_params)
-
     respond_to do |format|
       if current_order.order_items << @order_item
         format.html { redirect_to  }
