@@ -10,7 +10,7 @@
 
   <div class="col-md-6">
     <div class="col-sm-2 col-sm-offset-1">
-      <strong><%= number_to_currency(item.cost) %></strong>
+      <h4><%= number_to_currency(item.cost) %></h4>
     </div><!--col-->
 
     <%= form_for OrderItem.new, :remote => true do |oi| %>

@@ -1,6 +1,6 @@
 <style>
   body{
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(37, 37, 37);
   }
   h1{
       color: #ffffff;
@@ -34,13 +34,16 @@
       left: 50px;
       z-index: -1;
   }
+  .item{
+      color: white;
+  }
 </style>
 
 
-<%= image_tag "themes/japanese/yume_gyousyo_inverse.png", :id => 'background_image' %>
+<%= image_tag "#{Rails.root}/app/assets/images/themes/japanese/yume_gyousy_inv.png", :id => 'background_image' %>
 
 <div class="container menu">
-  <%= render :partial => 'parts/introduction' %>
+  <%#= render :partial => 'parts/introduction' %>
 
   <h1 class="text-center"><strong><%= @menu.name %><br>
     <small><%= @menu.description %></small></strong></h1>
