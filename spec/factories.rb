@@ -5,14 +5,30 @@ FactoryGirl.define do
   sequence(:name){ |i| "#{Faker::Company.name}_#{i}"}
 
   factory :order do
-    contact_phone Faker::PhoneNumber.phone_number
-    contact_name Faker::Name.name
+
+    factory :order_with_order_items do
+
+      factory :complete_order do
+        contact_phone Faker::PhoneNumber.phone_number
+        contact_name Faker::Name.name
+      end
+
+      ignore do
+        order_item_count 10
+      end
+      after(:build) do |order, evaluator|
+        evaluator.order_item_count.times do
+          order.order_items << create(:order_item)
+        end
+      end
+    end
   end
 
   factory :order_item do
     order
     item
     cost Random.rand(0..200.0)
+    quantity Random.rand(1..30)
   end
 
   factory :hours_available do
@@ -48,7 +64,7 @@ FactoryGirl.define do
 
   factory :store do
     name
-    sales_tax_rate Random.rand(0.0..15.0)
+    sales_tax_rate Random.rand(0..15)
     menu_package MENU_PACKAGES.sample
 
     after(:build) do |s|

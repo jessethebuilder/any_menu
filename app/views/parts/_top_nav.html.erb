@@ -25,6 +25,13 @@
 
     <div id='top_nav_body' class='collapse navbar-collapse'>
       <ul class='nav navbar-nav navbar-right'>
+        <li>
+          <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+              <%= link_to 'Login', new_user_session_path %>
+          <% end %>
+        </li>
 
         <%= render :partial => 'orders/current' %>
 
@@ -36,19 +43,15 @@
               <li><%= link_to 'Sections', sections_path %></li>
               <li><%= link_to 'Edit Store', edit_store_path(store) if store %></li>
 
+              <li><%= link_to 'Add User', new_user_registration_path %></li>
+
             </ul>
           </li>
         <% end %>
 
 
 
-        <li>
-          <% if user_signed_in? %>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-          <% else %>
-              <%= link_to 'Login', new_user_session_path %>
-          <% end %>
-        </li>
+
         <li>
 
         </li>

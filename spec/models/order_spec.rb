@@ -7,8 +7,7 @@ describe Order do
   it{ should accept_nested_attributes_for :order_items}
 
   describe 'Validations' do
-    it{ should validate_presence_of :contact_phone }
-    it{ should validate_presence_of :contact_name}
+    it{ should ensure_inclusion_of(:status).in_array(Order::STATUSES) }
 
     it 'if delivery == true, it should check to see that NONE of the OrderItems are dont_deliver == true' do
       order.dining_location = 'delivery'
@@ -21,10 +20,52 @@ describe Order do
       order.dining_location = 'take_out'
       order.should be_valid
     end
+
+    describe 'special validations for complete order' do
+      specify 'if #status == completing, validate for #contact_name and #contact_phone' do
+        order.contact_name = nil
+        order.contact_phone = nil
+        order.should be_valid
+        order.status = 'completing'
+        order.should_not be_valid
+        order.errors[:contact_name].should include "contact name must be included to complete order"
+        order.errors[:contact_phone].should include "contact phone number must be included to complete order"
+      end
+    end
   end
 
   describe 'Associations' do
     it{ should belong_to :user }
+  end
+
+  describe 'Calculated Values' do
+    describe '#order_items_total' do
+      it 'should return the total of all of the item_totals' do
+        3.times do
+          order.order_items << create(:order_item, :cost => 100, :quantity => 2)
+        end
+        order.order_items_total.should == 600
+      end
+    end
+
+    describe '#tax' do
+      it 'should return the total of taxes of all taxed items' do
+        store = create :store, :sales_tax_rate => 10
+        5.times do
+          order.order_items << create(:order_item, :cost => 5, :quantity => 2)
+        end
+        order.tax.should == 5.0
+      end
+    end
+
+    describe '#total' do
+      it 'should return the total of all order_items + tax where applicable' do
+        3.times do
+          order.order_items << create(:order_item)
+        end
+        order.total.should == order.order_items.collect{ |oi| oi.item_total + oi.tax }.reduce(:+)
+      end
+    end
   end
 
 end

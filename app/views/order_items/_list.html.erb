@@ -16,21 +16,23 @@
         </strong>
       </div><!--col-->
 
-      <div class="col-sm-2">
-        <div class="form-group">
-          <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
-        </div>
-      </div><!--col-->
+      <div class="col-sm-6">
+        <div class="col-xs-4">
+          <div class="form-group">
+            <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
+          </div>
+        </div><!--col-->
 
-      <div class="col-sm-2">
-        <div id="<%= "order_item_#{oi.id}_total" %>">
-          <%= number_to_currency(oi.item_total) %>
-        </div>
-      </div><!--col-->
+        <div class="col-xs-4">
+          <div id="<%= "order_item_#{oi.id}_total" %>">
+            <%= number_to_currency(oi.item_total) %>
+          </div>
+        </div><!--col-->
 
-      <div class="col-md-2">
-        <%= link_to 'remove', order_item_path(oi), :remote => true, :method => :delete, :class => 'btn btn-danger btn-xs' %>
-      </div>
+        <div class="col-xs-4">
+          <%= link_to 'remove', order_item_path(oi), :remote => true, :method => :delete, :class => 'btn btn-danger btn-xs' %>
+        </div><!--col-->
+      </div><!--col-sm-6-->
     </div><!--row-->
   <% end %><!--form-->
 <% end %><!--loop-->

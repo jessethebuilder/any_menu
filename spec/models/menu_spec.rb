@@ -60,7 +60,7 @@ describe Menu do
       expect{ menu.sections.delete(new_section).to change{ menu.section_order.count }.by(-1) }
     end
 
-    describe '#move_section(section, move_modifier)' do
+    describe '#move_section(section, velocity)' do
       specify 'it expects 2 parameters: a section and a positive or negative integer' do
         test_section = Section.first
         menu.move_section(test_section, 1)
@@ -71,10 +71,19 @@ describe Menu do
         menu.section_order[1].should == test_section2.to_param
       end
 
-      it 'should throw an error if the move_modifier tries to place section out of bounds' do
-        expect{ menu.move_section(Section.first, 20) }.to raise_error
-        expect{ menu.move_section(Section.first, -1) }.to raise_error
+      specify 'velocities that outside of #section_order array bounds loop around' do
+        test_section = Section.first
+        menu.move_section(test_section, -1)
+        menu.section_order.last.should == test_section
+
+        menu.move_section(test_section, 1)
+        menu.section_order.first.should == test_section
       end
+
+      #it 'should throw an error if the move_modifier tries to place section out of bounds' do
+      #  expect{ menu.move_section(Section.first, 20) }.to raise_error
+      #  expect{ menu.move_section(Section.first, -1) }.to raise_error
+      #end
     end
 
     describe 'ordered_sections' do

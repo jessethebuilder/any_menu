@@ -1,6 +1,6 @@
 #require 'spec_helper'
 #
-#describe 'Order Item Requests' do
+#describe 'Order Item Requests', :js => true do
 #  let!(:store){ create :test_store }
 #
 #  specify 'Price is based on WHEN MENU IS SERVED to user. Not when the OrderItem is created' do
@@ -20,4 +20,5 @@
 #    test_order_item.price.should_not == 500000
 #    test_order_item.price.should == test_cost
 #  end
+#
 #end

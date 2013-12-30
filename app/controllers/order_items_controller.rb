@@ -42,6 +42,7 @@ class OrderItemsController < ApplicationController
   # PATCH/PUT /order_items/1
   # PATCH/PUT /order_items/1.json
   def update
+    @order = current_order
     respond_to do |format|
       if @order_item.update(order_item_params)
         format.html { redirect_to @order_item, notice: 'Order item was successfully updated.' }

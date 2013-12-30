@@ -6,9 +6,6 @@ class Order < ActiveRecord::Base
 
   has_one :address, :as => :addressable
 
-  #validates :contact_phone, :presence => true
-  #validates :contact_name, :presence => true
-
   validate :all_delivery_items_deliverable
   private
   def all_delivery_items_deliverable
@@ -18,6 +15,35 @@ class Order < ActiveRecord::Base
       end
     end
   end
-
   public
+
+  validate :name_and_phone_exist
+  private
+  def name_and_phone_exist
+    if status == 'completing'
+      errors.add :contact_name, 'contact name must be included to complete order' if contact_name.blank?
+      errors.add :contact_phone, 'contact phone number must be included to complete order' if contact_phone.blank?
+    end
+  end
+  public
+
+  STATUSES = %w[completing]
+  validates :status, :inclusion => {:in => STATUSES}, :allow_blank => true
+
+  PAYMENT_METHODS = %w|cash check|
+
+  #Calculated Methods
+  def order_items_total
+    order_items.collect{ |oi| oi.item_total }.reduce(:+)
+  end
+
+  def tax
+    order_items.collect{ |oi| oi.tax }.reduce(:+)
+  end
+
+  def total
+    #untested
+    order_items_total + tax
+  end
+
 end

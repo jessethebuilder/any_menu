@@ -40,11 +40,9 @@ class OrdersController < ApplicationController
         #session[:order_item_id] = @order.id
 
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @order }
-        format.js{ redirect_to :back }
+        format.js #{ redirect_to :back }
       else
         format.html { render action: 'new' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -55,11 +53,9 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.update(order_params)
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
-        format.json { head :no_content }
-        format.js{ redirect_to :back}
+        #format.js{ redirect_to :back}
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        format.html { render action: 'complete' }
       end
     end
   end
@@ -83,7 +79,8 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user_id, :order_item_attributes => [:id, :cost, :item_id, :order_id, :quantity,
+      params.require(:order).permit(:user_id, :status, :dining_location, :note, :contact_name, :contact_phone,
+                                    :order_item_attributes => [:id, :cost, :item_id, :order_id, :quantity,
                                                                          :contact_name, :contact_phone])
     end
 end

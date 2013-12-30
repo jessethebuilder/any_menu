@@ -1,3 +1,42 @@
+<style>
+  body{
+      background-color: rgba(124, 124, 124, 0.51);
+  }
+  h1{
+      color: black;
+      font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+      font-size: 64px;
+  }
+  h1 small{
+      color: rgba(0, 0, 0, 0.59);
+
+  }
+  h2{
+      color: black;
+      font-family: "Brush Script MT", cursive;
+      font-size: 48px;
+  }
+  h2 small{
+      color: rgba(0, 0, 0, 0.59);
+  }
+  h4{
+      font-size: 28px;
+      color: black;
+      font-family: "Brush Script MT", cursive;
+  }
+  h4 small{
+      color: rgba(0, 0, 0, 0.59);
+  }
+  #background_image{
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      z-index: -1;
+  }
+</style>
+
+
+<%= image_tag "themes/japanese/yume_gyousyo.png", :id => 'background_image' %>
 
 <div class="container menu">
   <%= render :partial => 'parts/introduction' %>
@@ -5,7 +44,7 @@
   <h1 class="text-center"><strong><%= @menu.name %><br>
     <small><%= @menu.description %></small></strong></h1>
   <hr>
-  <% @menu.sections.each do |s| %>
+  <% @menu.ordered_sections.each do |s| %>
     <%= render :partial => 'sections/show_on_menu', :locals => {:section => s, :menu => @menu} %>
   <% end %>
 </div>

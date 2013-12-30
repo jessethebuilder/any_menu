@@ -1,6 +1,6 @@
 <div class="section">
   <h2><%= section.name %><small> <%= section.description %></small></h2>
-  <% section.items.each do |i| %>
+  <% section.ordered_items.each do |i| %>
     <%= render :partial => 'items/show_on_menu', :locals => {:item => i} %>
   <% end %>
 </div>
