@@ -34,8 +34,8 @@
 
   <div class="row">
     <div class="col-md-6">
-      <%= express_carousel "#{Rails.root}/app/assets/images/themes/japanese/" %>
-      <%#= image_tag @item.image.url(:show), :class => 'pull-right' if @item.image.exists? %>
+      <%#= express_carousel "#{Rails.root}/app/assets/images/themes/japanese/" %>
+      <%= image_tag @item.image.url(:show) if @item.image.exists? %>
     </div>
   <!--</div>-->
 

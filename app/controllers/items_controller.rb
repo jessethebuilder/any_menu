@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
 
   def remove_image_from
     if @item.update(:image => nil)
-      redirect_to path_to_edit_section
+      redirect_to path_to_edit_item
     else
       redirect_to :action => 'edit'
     end

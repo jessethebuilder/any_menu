@@ -1,11 +1,13 @@
 u = User.new(:email => 'info@any-menu.com', :password => 'testtest', :user_type => 'owner')
 u.save
 
-s = Store.new(:name => Faker::Company.name,
+s = Store.new(:name => "Japanese Letters",
               :description => Faker::Lorem.paragraph(sentence_count = 2),
               :sales_tax_rate => Random.rand(0.0..15.0),
               :menu_package => 'single_menu',
-              :delivers => true
+              :delivers => true,
+              :dine_in => true,
+              :facebook_app_id => '1438033749758995'
              )
 hours = HoursAvailable.new
 DAYS.each do |day|
@@ -15,7 +17,7 @@ end
 s.hours_available = hours
 s.save!
 
-m = Menu.new(:name => Faker::Company.name, :description => Faker::Lorem.paragraph(sentence_count = 1))
+m = Menu.new(:name => "Japanese Letters", :description => Faker::Lorem.paragraph(sentence_count = 1))
 s.menus << m
 m.save!
 #m.hours_available = hours.dup
@@ -25,7 +27,8 @@ m.save!
     10.times do
       i = Item.new :name => Faker::Company.bs.titlecase,
                    :cost => Random.rand(0..200.0),
-                   :description => Faker::Lorem.paragraph(sentence_count =1)
+                   :description => Faker::Lorem.paragraph(sentence_count =1),
+                   :long_description => Faker::Lorem.paragraph(sentence_count = 3)
       sec.items << i
     end
   m.sections << sec
