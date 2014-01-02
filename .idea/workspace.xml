@@ -2,58 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f1dd5a-d206-42af-a4d1-a59f534f7816" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/themes/japanese/food-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/order_items/_added_notification.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/order_items/_update_totals.js.erb" />
-      <change type="MOVED" beforePath="C:\Users\jf\Desktop\jesseweb\any_menu\app\views\items\_item_list.html.erb" afterPath="$PROJECT_DIR$/app/views/items/_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_current.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_current.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/items/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/hours_available/_form_small.html.erb" afterPath="$PROJECT_DIR$/app/views/hours_available/_form_small.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_list.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_items/_list.html.erb" afterPath="$PROJECT_DIR$/app/views/order_items/_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/_list.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/_show_on_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/items/_show_on_menu.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/_show_on_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/_show_on_menu.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parts/_top_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/parts/_top_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/any_menu.iml" afterPath="$PROJECT_DIR$/.idea/any_menu.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/complete.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/complete.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_items/create.js.erb" afterPath="$PROJECT_DIR$/app/views/order_items/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_items/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/order_items/destroy.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/items/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories.rb" afterPath="$PROJECT_DIR$/spec/factories.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/hours_available.rb" afterPath="$PROJECT_DIR$/app/models/hours_available.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/hours_available_request_spec.rb" afterPath="$PROJECT_DIR$/spec/features/hours_available_request_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/hours_available_spec.rb" afterPath="$PROJECT_DIR$/spec/models/hours_available_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/item_spec.rb" afterPath="$PROJECT_DIR$/spec/models/item_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/items_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/items_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/items_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/new.html.erb" afterPath="$PROJECT_DIR$/app/views/items/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stores/new.html.erb" afterPath="$PROJECT_DIR$/app/views/stores/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/order_spec.rb" afterPath="$PROJECT_DIR$/spec/models/order_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/show.html.erb" afterPath="$PROJECT_DIR$/app/views/items/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/show.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/store.rb" afterPath="$PROJECT_DIR$/app/models/store.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/store_spec.rb" afterPath="$PROJECT_DIR$/spec/models/store_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stores_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stores_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_items/update.js.erb" afterPath="$PROJECT_DIR$/app/views/order_items/update.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/original/phil_original.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/show/phil_original.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/thumb/phil_original.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131231083711_add_place_order_at_to_order.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140102035247_add_attachment_image_to_items.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140102051346_add_dummy_to_item.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140102055600_add_long_description_to_item.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140102090707_add_facebook_app_id_to_store.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="any_menu.iws" />
@@ -141,7 +97,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/stores/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="97" selection-start="901" selection-end="901" vertical-scroll-proportion="0.36266667" vertical-offset="255" max-vertical-offset="1275">
+            <state line="23" column="97" selection-start="901" selection-end="901" vertical-scroll-proportion="0.28392485" vertical-offset="255" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -1056,7 +1012,11 @@
       <created>1388402466674</created>
       <updated>1388402466674</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added Order&#10;">
+      <created>1388654974357</created>
+      <updated>1388654974357</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1081,10 +1041,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53504044" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25606468" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.6668806" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1096,7 +1056,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.351733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3962264" sideWeight="0.843389" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3962264" sideWeight="0.843389" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1486,7 +1446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stores/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="97" selection-start="901" selection-end="901" vertical-scroll-proportion="0.36266667" vertical-offset="255" max-vertical-offset="1275">
+        <state line="23" column="97" selection-start="901" selection-end="901" vertical-scroll-proportion="0.28392485" vertical-offset="255" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
