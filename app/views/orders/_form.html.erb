@@ -32,6 +32,19 @@
       <% end %>
     </div>
 
+    <div id="place_order_for_later_link" class="form-group">
+      <%= link_to_function 'Place order for later?', 'hideAndUnHide("#place_order_for_later_link", "#place_order_at")' %>
+    </div>
+
+
+    <div id="place_order_at" class="form-group hidden">
+      <%= f.label :place_order_at, :class => 'control-label' %>
+      <div class="form-inline">
+        <%= f.time_select :place_order_at, {:ampm => true},
+                          :class => 'form-control' %>
+      </div>
+    </div>
+
     <div class="form-group">
       <%= f.submit 'Place Order', :class => 'btn btn-primary form-control' %>
     </div>
@@ -42,7 +55,7 @@
     <%= render :partial => 'order_items/list', :locals => {:order_items => @order.order_items} %>
     <hr>
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-xs-6">
         <strong>
           Sub Total:
         </strong>
@@ -58,7 +71,7 @@
     </div><!--inner row-->
 
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-xs-6">
         Tax:
       </div>
 
@@ -71,7 +84,7 @@
 
 
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-xs-6">
         <h3>Total:</h3>
       </div>
 
@@ -86,3 +99,12 @@
 
   </div><!--col-->
 </div><!--row-->
+
+
+<script>
+    function hideAndUnHide(selectorToHide, selectorToUnHide){
+        //relies on TwitterBootstrap 'hidden' class
+        $(selectorToHide).addClass('hidden');
+        $(selectorToUnHide).removeClass('hidden');
+    }
+</script>

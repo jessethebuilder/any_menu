@@ -21,6 +21,8 @@ class Store < ActiveRecord::Base
 
   validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
 
+  validates :average_wait_time, :presence => true, :numericality => { :greater_than_or_equal_to => 1 }
+
   def dining_location_options
     arr = ['take_out']
     arr << 'delivery' if self.delivers?
@@ -28,8 +30,8 @@ class Store < ActiveRecord::Base
     arr
   end
 
-  def open?
-    self.hours_available.open?
+  def open?(time = Time.now)
+    self.hours_available.open?(time)
   end
 
    def current_menu

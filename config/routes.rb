@@ -27,6 +27,7 @@ AnyMenu::Application.routes.draw do
         get 'remove'
         get 'add'
         get 'move'
+        get 'remove_image_from'
       end
     end
   end
@@ -47,6 +48,7 @@ AnyMenu::Application.routes.draw do
           get 'remove'
           get 'add'
           get 'move'
+          get 'remove_image_from'
         end
       end
     end

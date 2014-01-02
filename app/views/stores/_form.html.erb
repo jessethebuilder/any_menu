@@ -9,7 +9,7 @@
     </div><!--col-->
 
     <div class="col-md-4">
-      <h2>Store Options</h2>
+      <h3>Store Options</h3>
       <div class="form-group">
         <%= f.label :name, 'Store Name', :class => 'control-label' %>
         <%= f.text_field :name, :class => 'form-control' %>
@@ -18,6 +18,11 @@
       <div class="form_group">
         <%= f.label :description, 'Describe Your Store', :class => 'control-label' %><br>
         <%= f.text_area :description, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :average_wait_time, 'Average wait time<small> in minutes </small>'.html_safe, :class => 'control-label' %>
+        <%= f.text_field :average_wait_time, :value => 20, :class => 'form-control' %>
       </div>
 
       <div class="checkbox">
@@ -38,8 +43,13 @@
       </div>
 
       <div class="form-group">
-        <%= f.label 'Menu Package', :class => 'control-label' %>
+        <%= f.label :menu_package, :class => 'control-label' %>
         <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :facebook_app_id, 'Facebook app id', :class => 'control-label' %>
+        <%= f.text_field :facebook_app_id, :class => 'form-control' %>
       </div>
 
       <div class="form-group">
@@ -48,7 +58,7 @@
     </div><!-- col -->
 
     <div id='hours_available' class="col-md-4">
-      <h2>Store Hours</h2>
+      <h3>Store Hours</h3>
       <%= f.fields_for :hours_available do |ha_fields| %>
         <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
       <% end %>

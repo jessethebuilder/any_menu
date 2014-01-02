@@ -1,5 +1,2 @@
 $('#order_item_<%= @order_item.id %>_total').replaceWith("<%= j render :partial => 'order_item_total', :locals => {:order_item => @order_item} %>");
-$('#sub_total').html('<%= number_to_currency(@order.order_items_total) %>');
-$('#tax').html('<%= number_to_currency(@order.tax, :unit => "") %>');
-$('#total').html('<%= number_to_currency(@order.total) %>');
-
+<%= render :partial => 'update_totals', :locals => {:order => @order} %>

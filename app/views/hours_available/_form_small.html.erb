@@ -1,17 +1,21 @@
 <div class="hours_available">
   <% DAYS.each do |day| %>
     <div class="row">
-      <div class="col-xs-12">
-        <div class="form-group">
+      <div class="col-xs-8">
+        <div class="form-group open_time_select">
           <% attr = "#{day}_open".to_sym %>
+
+
           <%= f.label attr, :class => 'control-label' %>
+
           <div class="form-inline">
             <%= f.time_select attr, {:minute_step => 15, :ampm => true},
-                                   :class => 'form-control', :value => f.object.send(attr) %>
+                                     :class => 'form-control', :value => f.object.send(attr) %>
+
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group close_time_select">
           <% attr = "#{day}_close".to_sym %>
           <%= f.label attr, :class => 'control-label' %>
           <div class="form-inline">
@@ -49,4 +53,25 @@
       </div><!--row-->
     </div><!--col-->
   <% end %>
+
+  <script>
+    function hideHours(){
+
+        $('#open_close_toggle').html('open');
+    }
+    function showHours(){
+
+        $('#open_close_toggle').html('close');
+    }
+    function toggleHours(){
+      $(document).on('click', '#open_close_toggle', function(){
+          if($(this).hasClass('closed')){
+            showHours();
+          } else {
+            hideHours();
+          }
+      })
+    }
+
+  </script>
 </div>

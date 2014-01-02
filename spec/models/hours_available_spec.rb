@@ -21,6 +21,13 @@ describe HoursAvailable do
       hours_available.sunday_close = Time.parse('15-12-2013-9:00am')
       hours_available.should be_valid
     end
+
+    it 'validates that if an #closed is given, a #open exists' do
+      #if #open is nil, store is closed, so #close is not evaluated.
+      hours_available.sunday_open = Time.parse("12:00pm")
+      hours_available.valid?.should be_false
+      hours_available.errors[:sunday_open].should include('must also have a Sunday close.')
+    end
   end
 
   describe '#open?' do

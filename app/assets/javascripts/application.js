@@ -13,6 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require twitter/bootstrap
-
+//= require bootstrap
 //= require_tree .
+
+//View Menu
+function showOrderItemAddedNotification(slideSpeed, delay){
+  setTimeout(function(){
+    $('#order_item_added_notification').slideUp(slideSpeed, function(){
+      $('#order_item_added_notification').detach();
+    })
+  }, delay)
+}
+
+//fb comments
+

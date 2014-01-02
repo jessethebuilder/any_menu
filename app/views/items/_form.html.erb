@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_for @form_target do |f| %>
+  <%= form_for @form_target, :html => {:multipart => true} do |f| %>
     <%= render :partial => 'parts/error_explanation', :locals => {:object => @item} %>
 
     <div class="col-md-4">  
@@ -14,8 +14,18 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :long_description, :class => 'control-label' %>
+        <%= f.text_area :long_description, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :cost, :class => 'control-label' %>
         <%= f.text_field :cost, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :image, :class => 'control-label' %>
+        <%= f.file_field :image, :class => 'btn btn-default' %>
       </div>
 
       <div class="form-group">
@@ -41,6 +51,23 @@
       <div class="form-group">
         <%= f.submit :class => 'btn btn-primary form-control' %>
       </div>
+
+      <!--<div class="form-group">-->
+        <!--<%#= f.submit 'Preview', :class => 'btn btn-info form-control' %>-->
+      <!--</div>-->
+    <% end %>
+
+  </div><!--col-->
+
+  <div class="col-md-4">
+    <% if @item.image.exists? %>
+      <%= image_tag @item.image.url(:show) %>
+
+      <% if @menu %>
+        <%= link_to '(remove image)', remove_image_from_menu_section_item_path(@menu, @section, @item) %>
+      <% else %>
+        <%= link_to '(remove image)', remove_image_from_section_item_path(@menu, @section, @item) %>
+      <% end %>
     <% end %>
   </div><!--col-->
-</div><!--row-->  
+</div>

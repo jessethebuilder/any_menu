@@ -1,7 +1,7 @@
 <div id="item_<%= item.id %>" class="row item">
   <div class="col-md-6">
     <h4>
-      <%= item.name %>
+      <%= link_to item.name, menu_section_item_path(menu, section, item) %>
       <small>
         <%= item.description %>
       </small>
@@ -10,7 +10,9 @@
 
   <div class="col-md-6">
     <div class="col-sm-2 col-sm-offset-1">
-      <h4><%= number_to_currency(item.cost) %></h4>
+      <div class="form-group">
+        <h4><%= number_to_currency(item.cost) %></h4>
+      </div>
     </div><!--col-->
 
     <%= form_for OrderItem.new, :remote => true do |oi| %>
@@ -18,12 +20,12 @@
       <%= oi.hidden_field :cost, :value => item.cost %>
       <div class="col-sm-4 col-sm-offset-1">
         <div class="form-group">
-          <%= oi.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
+          <%#= oi.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
         </div>
       </div><!--col-->
 
       <div class="col-sm-4">
-        <div class="form-group">
+        <div id="order_button" class="form-group">
           <%= oi.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
         </div>
       </div><!--col-->

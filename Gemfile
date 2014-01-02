@@ -39,10 +39,13 @@ gem 'twitter_express', :git => 'https://github.com/jessethebuilder/TwitterExpres
 #gem 'twitter_express', :path => 'C:\Users\jf\Desktop\jesseweb\TwitterExpress'
 
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
+#gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem 'devise'
 gem 'geocoder'
+
+gem "paperclip", "~> 3.0"
 
 group :test, :development do
   gem 'faker'

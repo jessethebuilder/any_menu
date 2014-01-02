@@ -1,6 +1,9 @@
 <div class="container">
-  <h1>Edit <strong><%= @item.name %></strong>
+  <h2>Edit
+    <strong>
+      <%= link_to @item.name, path_to_item %>
+    </strong>
     <small><%= @link_back %></small>
-  </h1>
+  </h2>
   <%= render 'form' %>
 </div>

@@ -1,6 +1,7 @@
 <div class="section">
-  <h2><%= section.name %><small> <%= section.description %></small></h2>
+  <h2 class="text-center"><%= section.name %><br>
+    <small> <%= section.description %></small></h2>
   <% section.ordered_items.each do |i| %>
-    <%= render :partial => 'items/show_on_menu', :locals => {:item => i} %>
+    <%= render :partial => 'items/show_on_menu', :locals => {:item => i, :section => section, :menu => menu} %>
   <% end %>
 </div>

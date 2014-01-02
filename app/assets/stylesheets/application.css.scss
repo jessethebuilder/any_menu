@@ -1,41 +1,27 @@
-@import "twitter/bootstrap";
+//buttons
+$btn-primary-bg: rgba(37, 2, 74, 0.58);
+
+$close-color: rgba(255, 0, 22, 0.59);
+$close-font-weight: 800;
+
+//navbar
+$navbar-inverse-bg: rgba(36, 36, 36, 0.95);
+
+//modal
+$modal-content-bg: $navbar-inverse-bg;
+
+//Japanese Letters
+$input-bg: #e5e5e5;
+$input-border-focus: #9902ff;
+
+
+
+@import "bootstrap";
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
  *= require_tree .
  */
-
-body{
-//  background-color: rgb(0, 0, 0);
-}
-
-//.item{
-//  border-radius: 15px;
-//  -moz-border-radius: 15px;
-//  border-color: rgba(3, 0, 255, 0.29);
-//  border-width: 3px;
-//  border-style: solid;
-//  padding: 8px;
-//  margin-bottom: 5px;
-//  margin-left: 5px;
-//  margin-right: 5px;
-//}
-
 .menu{
-
-//  border-radius: 15px;
-//  -moz-border-radius: 15px;
-//  border-color: #ff00c2;
-//  border-width: 5px;
-//  border-style: solid;
   margin-top: 30px;
 }
 
@@ -43,7 +29,64 @@ body{
   margin-top: 40px;
 }
 
-#express_modal{
-//  color: #00ff51;
-//  background-color: black;
+
+//Menu
+#order_button{
+  padding-top: 20px;
+}
+#order_item_added_notification{
+  font-size: 20px;
+  color: white;
+}
+
+//================== Japanese Letters ============================================
+body{
+  background-color: rgb(37, 37, 37);
+}
+h1{
+  color: #ffffff;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 64px;
+}
+h1 small{
+  color: rgba(235, 235, 235, 0.75);
+}
+h2{
+  color: #ffffff;
+
+  font-family: "Brush Script MT", cursive;
+  font-size: 48px;
+}
+h2 small{
+  color: rgba(235, 235, 235, 0.75);
+}
+h3{
+  color: white;
+  font-size: 36px;
+}
+h4{
+  font-size: 28px;
+  color: #ffffff;
+
+  font-family: "Brush Script MT", cursive;
+}
+h4 small{
+  color: rgba(235, 235, 235, 0.75);
+}
+#background_image{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: -1;
+}
+.item{
+  color: white;
+}
+.control-label{
+  color: white;
+}
+
+//-------------------------Modal---------------------------
+.modal-body form{
+  color: white;
 }

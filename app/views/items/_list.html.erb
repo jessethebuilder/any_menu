@@ -10,17 +10,13 @@
         </div>
 
         <div class="col-xs-1 offset-xs-1">
-          <% unless i == items.last %>
-              <%= link_to '<span class="glyphicon glyphicon-chevron-down"></span>'.html_safe,
+          <%= link_to '<span class="glyphicon glyphicon-chevron-down"></span>'.html_safe,
                           move_menu_section_item_path(@menu, @section, i, :velocity => 1) %>
-          <% end %>
         </div>
 
         <div class="col-xs-1">
-          <% unless i == items.first %>
-              <%= link_to '<span class="glyphicon glyphicon-chevron-up"></span>'.html_safe,
+          <%= link_to '<span class="glyphicon glyphicon-chevron-up"></span>'.html_safe,
                           move_menu_section_item_path(@menu, @section, i, :velocity => -1) %>
-          <% end %>
         </div>
 
         <div class="col-xs-2 offset-xs-1">

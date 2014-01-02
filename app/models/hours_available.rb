@@ -4,7 +4,17 @@ class HoursAvailable < ActiveRecord::Base
   has_many :exception_to_availabilities
 
   validate :closes_are_after_opens
+  validate :opens_have_closes
 private
+  def opens_have_closes
+    @d = day_methods_hash
+    day_methods_hash.each do |day, methods|
+      if methods[:open] && !methods[:close]
+        errors.add methods[:close], "must also have a #{day.to_s.titlecase} close."
+      end
+    end
+  end
+
   def closes_are_after_opens
     DAYS.each do |day|
       open = "#{day}_open".to_sym
@@ -71,5 +81,13 @@ public
 
   def format_time(time)
     time ? time.strftime("%I:%M%p") : nil
+  end
+
+  def day_methods_hash
+    h = {}
+    DAYS.each do |day|
+      h[day.to_sym] = {:open => "#{day}_open".to_sym, :close => "#{day}_close".to_sym}
+    end
+    h
   end
 end

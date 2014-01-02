@@ -1,0 +1,3 @@
+$('#sub_total').html('<%= number_to_currency(order.order_items_total) %>');
+$('#tax').html('<%= number_to_currency(order.tax, :unit => "") %>');
+$('#total').html('<%= number_to_currency(order.total) %>');

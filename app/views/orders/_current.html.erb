@@ -1,6 +1,7 @@
 <li id="current_order">
   <% if current_order? %>
-    <%= link_to '<strong><span class="glyphicon glyphicon-cutlery"></span> Review Order</strong>'.html_safe,
-                           review_order_path(current_order), :remote => true, :class => 'btn btn-default' %>
+    <%= link_to '<strong><span class="glyphicon glyphicon-cutlery"></span> Your Order</strong>'.html_safe,
+                           review_order_path(current_order), :remote => true,
+                           :class => 'btn btn-primary' %>
   <% end %>
 </li>

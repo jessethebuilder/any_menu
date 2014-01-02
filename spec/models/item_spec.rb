@@ -16,4 +16,6 @@ describe Item do
     end
     it{ should validate_presence_of :section }
   end
+
+
 end

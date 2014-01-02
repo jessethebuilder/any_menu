@@ -66,6 +66,7 @@ FactoryGirl.define do
     name
     sales_tax_rate Random.rand(0..15)
     menu_package MENU_PACKAGES.sample
+    average_wait_time Random.rand(10..60)
 
     after(:build) do |s|
       s.hours_available = build(:hours_available)

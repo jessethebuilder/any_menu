@@ -17,15 +17,28 @@ class Order < ActiveRecord::Base
   end
   public
 
+  #Special validations
   validate :name_and_phone_exist
+  validate :order_is_placed_before_close
+
   private
+
   def name_and_phone_exist
     if status == 'completing'
       errors.add :contact_name, 'contact name must be included to complete order' if contact_name.blank?
       errors.add :contact_phone, 'contact phone number must be included to complete order' if contact_phone.blank?
     end
   end
+
+  def order_is_placed_before_close
+    if place_order_at
+      errors.add :place_order_at, 'is after we close.' unless store.open?(place_order_at)
+    end
+  end
+
   public
+
+
 
   STATUSES = %w[completing]
   validates :status, :inclusion => {:in => STATUSES}, :allow_blank => true
@@ -45,5 +58,6 @@ class Order < ActiveRecord::Base
     #untested
     order_items_total + tax
   end
+
 
 end

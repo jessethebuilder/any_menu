@@ -21,7 +21,15 @@ describe Store do
     it{ should validate_presence_of :menu_package }
     it{ should ensure_inclusion_of(:menu_package).in_array(MENU_PACKAGES) }
 
-    it 'should raise error, before create if a Store already exists' do
+    it{ should validate_presences_of(:average_wait_time) }
+    it{ should validate_numericallity_of :average_wait_time }
+    it 'should add error if #average_wait_time is less than 1' do
+      store.average_wait_time = Random.rand(-10000..0)
+      store.should be_invalid
+      store.errors[:average_wait_time].should include 'cannot be less than 1'
+    end
+
+    it 'should add error, before create if a Store already exists' do
       store.save
       store2 = build :store
       expect{ store2.save! }.to raise_error(/Only 1 Store can exist/)

@@ -1,1 +1,2 @@
 $('#order_item_<%= @id_to_destroy %>').detach();
+<%= render :partial => 'update_totals', :locals => {:order => @order} %>

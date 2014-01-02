@@ -68,4 +68,16 @@ describe Order do
     end
   end
 
+  describe '#place_order_at' do
+    describe 'Special validation' do
+      it 'should be invalid if time to place order is after time the store closes' do
+        create :store
+        #default store is always closed (each day of hours_available is set to nil)
+        order = create :order, :place_order_at => Time.parse('12:00pm')
+        order.valid?.should be_false
+        order.errors(:place_order_at).should include('is after we close.')
+      end
+    end
+  end
+
 end

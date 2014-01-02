@@ -4,7 +4,7 @@
 
     <% unless @section.new_record? %>
     <div class="col-md-4">
-      <%= render :partial => 'items/item_list', :locals => {:items => @section.ordered_items} %>
+      <%= render :partial => 'items/list', :locals => {:items => @section.ordered_items} %>
     </div><!--col-->
     <% end %>
 

@@ -1,29 +1,58 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag "themes/japanese/yume_gyousy_inv.png", :id => 'background_image' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
+      <h2><%= @item.name %>
+        <% if super_user? %>
+            <small><%= link_to '(edit)', path_to_edit_item %></small>
+        <% end %>
+      </h2>
 
-<p>
-  <strong>Tax exempt:</strong>
-  <%= @item.tax_exempt %>
-</p>
+      <h4 class="text-center">
+        <%= @item.description %>
+      </h4>
 
-<p>
-  <strong>Dont deliver:</strong>
-  <%= @item.dont_deliver %>
-</p>
 
-<p>
-  <strong>Topping list:</strong>
-  <%= @item.topping_list_id %>
-</p>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+  <div class="row">
+    <div class="col-sm-6">
+      <blockquote>
+        <h3>
+          <%= @item.long_description %>
+        </h3>
+
+        <!--<div>-->
+        <!--</div>-->
+      </blockquote>
+
+      <div class="fb-comments" data-href="<%= url_to_item %>" data-numposts="20" data-colorscheme="dark"></div>
+
+    </div><!--col-->
+
+    <div class="col-md-6">
+      <%= image_tag @item.image.url(:show), :class => 'pull-right' if @item.image.exists? %>
+    </div>
+
+  </div><!--row-->
+
+  <div class="row">
+    <div class="col-sm-12">
+
+
+      <div id="fb-root"></div>
+
+      <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=140936849442574";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+    </div><!--col-->
+  </div><!--row-->
+</div>

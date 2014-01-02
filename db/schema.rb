@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230084328) do
+ActiveRecord::Schema.define(version: 20140102090707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,12 @@ ActiveRecord::Schema.define(version: 20131230084328) do
     t.float    "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.boolean  "dummy",              default: true
+    t.text     "long_description"
   end
 
   create_table "menus", force: true do |t|
@@ -120,6 +126,7 @@ ActiveRecord::Schema.define(version: 20131230084328) do
     t.string   "contact_name"
     t.string   "contact_phone"
     t.string   "status"
+    t.time     "place_order_at"
   end
 
   create_table "sectionalizations", force: true do |t|
@@ -147,6 +154,7 @@ ActiveRecord::Schema.define(version: 20131230084328) do
     t.datetime "updated_at"
     t.string   "menu_package"
     t.boolean  "dine_in"
+    t.string   "facebook_app_id"
   end
 
   create_table "topping_lists", force: true do |t|

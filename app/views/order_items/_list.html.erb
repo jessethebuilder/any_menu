@@ -10,13 +10,19 @@
 <% order_items.order(:id).each do |oi| %>
   <%= form_for oi, :remote => true do |f| %>
     <div id="order_item_<%= oi.id %>" class="row order_item_row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <strong>
           <%= oi.item.name %>
         </strong>
       </div><!--col-->
 
-      <div class="col-sm-6">
+      <!--<div class="col-sm-2">-->
+        <!--<div class="form-group">-->
+          <!--<%#= f.text_field :note, :class => 'form-control', :placeholder => 'Note' %>-->
+        <!--</div>-->
+      <!--</div>&lt;!&ndash;col&ndash;&gt;-->
+
+      <div class="col-sm-8">
         <div class="col-xs-4">
           <div class="form-group">
             <%= f.number_field :quantity, :value => oi.quantity, :class => 'form-control updates_quantity', :min => 1 %>
@@ -38,9 +44,10 @@
 <% end %><!--loop-->
 
 
+
 <script>
     $('.updates_quantity').on('change', function(e){
-//      $(this).parent('form').submit;
+//       $(this).parent('form').submit;
        $(e.target).closest('form').submit();
     })
 </script>

@@ -1,6 +1,7 @@
 class OrderItemsController < ApplicationController
   include ApplicationHelper
   before_action :set_order_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, :only => [:update, :destroy]
 
   # GET /order_items
   # GET /order_items.json
@@ -42,7 +43,7 @@ class OrderItemsController < ApplicationController
   # PATCH/PUT /order_items/1
   # PATCH/PUT /order_items/1.json
   def update
-    @order = current_order
+    @order = @order_item.order
     respond_to do |format|
       if @order_item.update(order_item_params)
         format.html { redirect_to @order_item, notice: 'Order item was successfully updated.' }
@@ -58,6 +59,7 @@ class OrderItemsController < ApplicationController
   # DELETE /order_items/1
   # DELETE /order_items/1.json
   def destroy
+
     @id_to_destroy = @order_item.id
     @order_item.destroy
     respond_to do |format|
@@ -70,6 +72,10 @@ class OrderItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_order_item
       @order_item = OrderItem.find(params[:id])
+    end
+
+    def set_order
+      @order = @order_item.order
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -2,7 +2,15 @@ require 'spec_helper'
 
 describe 'Hours Available Requests' do
 
-  specify 'adding an ExceptionToAvailability' do
+  describe 'Closing a day' do
+    store = make_store_and_login_as_owner
+    store.hours_available.sunda
+    visit edit_store_path(store)
+
+
+  end
+
+  specify 'Adding an ExceptionToAvailability' do
     store = make_store_and_login_as_owner
 
     visit edit_store_path(store)
