@@ -61,8 +61,8 @@ h2 small{
   color: rgba(235, 235, 235, 0.75);
 }
 h3{
-  color: white;
-  font-size: 36px;
+  color: #7c7c7c;
+  font-size: 30px;
 }
 h4{
   font-size: 28px;
@@ -89,4 +89,15 @@ h4 small{
 //-------------------------Modal---------------------------
 .modal-body form{
   color: white;
+}
+
+//----------------------Carousel-------------------------
+#express_carousel{
+  width: 480px;
+  height: 480px;
+}
+
+//-------------------FB comment plugin----------------------
+.fb-comments{
+  margin-top: 20px;
 }

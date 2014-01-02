@@ -1,4 +1,6 @@
 module ItemsHelper
+  include TwitterExpress
+
   def path_to_edit_item
     eval("edit_#{end_of_path}")
   end

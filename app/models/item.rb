@@ -6,6 +6,6 @@ class Item < ActiveRecord::Base
 
   validates :section, :presence => true
 
-  has_attached_file :image, :styles => { :show => "400x400>", :thumb => "150x150>" },
+  has_attached_file :image, :styles => { :show => "480x480>", :thumb => "150x150>"},
                              :default_url => "/images/:style/missing.png"
 end
