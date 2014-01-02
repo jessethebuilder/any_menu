@@ -20,16 +20,15 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <blockquote>
-        <h3>
-          <%= @item.long_description %>
-        </h3>
+      <% if @item.long_description %>
+        <blockquote>
+          <h3>
+            <%= @item.long_description %>
+          </h3>
+        </blockquote>
+      <% end %>
 
-        <!--<div>-->
-        <!--</div>-->
-      </blockquote>
-
-      <div class="fb-comments" data-href="<%= url_to_item %>" data-numposts="20" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="<%= url_to_item %>" data-numposts="10" width="750" data-colorscheme="dark"></div>
 
     </div><!--col-->
 
