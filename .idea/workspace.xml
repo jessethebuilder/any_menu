@@ -2,16 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f1dd5a-d206-42af-a4d1-a59f534f7816" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/original/rainier.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/show/rainier.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/thumb/rainier.jpg" />
-      <change type="DELETED" beforePath="C:\Users\jf\Desktop\jesseweb\any_menu\public\system\items\images\000\000\008\original\phil_original.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jf\Desktop\jesseweb\any_menu\public\system\items\images\000\000\008\show\phil_original.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jf\Desktop\jesseweb\any_menu\public\system\items\images\000\000\008\thumb\phil_original.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/items_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/temp/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/001/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/001/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/001/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/002/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/002/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/002/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/003/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/003/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/003/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/004/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/004/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/004/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/005/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/005/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/005/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/006/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/006/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/006/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/007/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/007/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/007/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/008/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/009/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/009/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/009/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/010/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/010/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/010/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/011/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/011/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/011/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/012/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/012/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/012/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/013/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/013/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/013/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/014/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/014/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/014/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/015/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/015/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/015/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/016/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/016/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/016/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/017/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/017/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/017/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/018/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/018/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/018/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/019/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/019/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/019/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/020/original/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/020/show/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/items/images/000/000/020/thumb/chicken-with-grits-final-l450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140102200342_add_average_wait_time_to_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/show.html.erb" afterPath="$PROJECT_DIR$/app/views/items/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="any_menu.iws" />
@@ -26,15 +81,15 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/any_menu@Rails_console__any_menu.coverage" NAME="Rails console: any_menu Coverage Results" MODIFIED="1388642782034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@All_specs_in_features__any_menu.coverage" NAME="All specs in features: any_menu Coverage Results" MODIFIED="1387439642911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
-    <SUITE FILE_PATH="coverage/any_menu@db_migrate__any_menu.coverage" NAME="db:migrate: any_menu Coverage Results" MODIFIED="1388653766903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
+    <SUITE FILE_PATH="coverage/any_menu@db_migrate__any_menu.coverage" NAME="db:migrate: any_menu Coverage Results" MODIFIED="1388693076454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@spec__any_menu.coverage" NAME="spec: any_menu Coverage Results" MODIFIED="1388483530856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@store_requests.coverage" NAME="store_requests Coverage Results" MODIFIED="1387439426683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/features" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@db_seed__any_menu.coverage" NAME="db:seed: any_menu Coverage Results" MODIFIED="1387601821046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@test__any_menu.coverage" NAME="test: any_menu Coverage Results" MODIFIED="1387515886709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
-    <SUITE FILE_PATH="coverage/any_menu@db_reset__any_menu.coverage" NAME="db:reset: any_menu Coverage Results" MODIFIED="1388218109291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
+    <SUITE FILE_PATH="coverage/any_menu@db_reset__any_menu.coverage" NAME="db:reset: any_menu Coverage Results" MODIFIED="1388693480351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@store_request_spec.coverage" NAME="store_request_spec Coverage Results" MODIFIED="1387570283222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/features" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@routes__any_menu.coverage" NAME="routes: any_menu Coverage Results" MODIFIED="1388225572484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
-    <SUITE FILE_PATH="coverage/any_menu@Development__any_menu.coverage" NAME="Development: any_menu Coverage Results" MODIFIED="1388659627939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
+    <SUITE FILE_PATH="coverage/any_menu@Development__any_menu.coverage" NAME="Development: any_menu Coverage Results" MODIFIED="1388693658949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@Ordering_Ordering_as_an_unknown_user_it_should_not_create_a_new_order__once_one_has_been_created_for_this_session__New__Add_to_Order__click_______________should_add_new_OrderItems__any_menu.coverage" NAME="Ordering Ordering as an unknown user it should not create a new order, once one has been created for this session. New &quot;Add to Order&quot; click&#10;              should add new OrderItems: any_menu Coverage Results" MODIFIED="1387919926165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@db_rollback__any_menu.coverage" NAME="db:rollback: any_menu Coverage Results" MODIFIED="1388639850187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
     <SUITE FILE_PATH="coverage/any_menu@db_test_purge__any_menu.coverage" NAME="db:test:purge: any_menu Coverage Results" MODIFIED="1387789316571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="any_menu" />
@@ -54,7 +109,16 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/items/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="43" selection-start="846" selection-end="846" vertical-scroll-proportion="-8.5" vertical-offset="408" max-vertical-offset="1105">
+            <state line="37" column="43" selection-start="846" selection-end="846" vertical-scroll-proportion="-0.9230769" vertical-offset="605" max-vertical-offset="1105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="2" selection-start="384" selection-end="384" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -90,7 +154,7 @@
       <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="81" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.77376425" vertical-offset="103" max-vertical-offset="816">
+            <state line="36" column="43" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.9168704" vertical-offset="237" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -174,7 +238,6 @@
         <option value="$PROJECT_DIR$/app/views/items/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/items/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/stores_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/stores/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/stores/new.html.erb" />
@@ -189,6 +252,7 @@
         <option value="$PROJECT_DIR$/app/views/items/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/items_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/menus/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
@@ -262,267 +326,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stores" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sections" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,32 +345,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="any_menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,11 +392,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="japanese" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,6 +416,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jf\Desktop\jesseweb\any_menu\app\assets\images\temp" />
       <recent name="C:\Users\jf\Desktop\jesseweb\any_menu\app\assets\images\themes\japanese" />
       <recent name="C:\Users\jf\Desktop\jesseweb\any_menu\app\assets\images" />
     </key>
@@ -913,11 +688,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: any_menu" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:rollback: any_menu" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate: any_menu" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.routes: any_menu" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.db:reset: any_menu" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:reset: any_menu" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate: any_menu" />
+        <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: any_menu" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:rollback: any_menu" />
+        <item index="4" class="java.lang.String" itemvalue="Rake.routes: any_menu" />
       </list>
     </recent_temporary>
   </component>
@@ -1069,7 +844,11 @@
       <created>1388661431180</created>
       <updated>1388661431180</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added Order&#10;">
+      <created>1388662701615</created>
+      <updated>1388662701615</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1098,7 +877,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25606468" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25606468" sideWeight="0.7612324" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.6668806" order="9" side_tool="false" content_ui="tabs" />
@@ -1106,8 +885,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20667523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.393531" sideWeight="0.8504493" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3951613" sideWeight="0.15661104" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3962264" sideWeight="0.843389" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3962264" sideWeight="0.15661104" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3962264" sideWeight="0.843389" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1147,11 +926,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/orders/complete.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="161" selection-end="161" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="21" selection-start="3096" selection-end="3096" vertical-scroll-proportion="-6.576923" vertical-offset="1597" max-vertical-offset="1972" />
@@ -1206,7 +980,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/order_items_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547" />
+        <state line="3" column="55" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
@@ -1332,11 +1108,6 @@
         <state line="16" column="20" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="408" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140102090707_add_facebook_app_id_to_store.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="12" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
@@ -1417,13 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/items/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="43" selection-start="846" selection-end="846" vertical-scroll-proportion="-8.5" vertical-offset="408" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="35" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="2431">
@@ -1445,9 +1209,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/items/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="43" selection-start="846" selection-end="846" vertical-scroll-proportion="-0.9230769" vertical-offset="605" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="2" selection-start="384" selection-end="384" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140102200342_add_average_wait_time_to_store.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="12" selection-start="70" selection-end="70" vertical-scroll-proportion="0.042394016" vertical-offset="0" max-vertical-offset="401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="81" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.77376425" vertical-offset="103" max-vertical-offset="816">
+        <state line="36" column="43" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.9168704" vertical-offset="237" max-vertical-offset="918">
           <folding />
         </state>
       </provider>

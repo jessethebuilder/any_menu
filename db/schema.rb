@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102090707) do
+ActiveRecord::Schema.define(version: 20140102200342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(version: 20140102090707) do
     t.string   "menu_package"
     t.boolean  "dine_in"
     t.string   "facebook_app_id"
+    t.integer  "average_wait_time"
   end
 
   create_table "topping_lists", force: true do |t|
