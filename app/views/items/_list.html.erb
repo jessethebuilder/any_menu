@@ -21,7 +21,7 @@
 
         <div class="col-xs-2 offset-xs-1">
           <%= link_to 'remove', remove_menu_section_item_path(@menu, @section, i),
-                      :class => 'text-danger',
+                      :class => 'text-danger', :tabindex => '-1',
                       :data => {:confirm => 'This will remove this item from this section on the menu. Are you sure?'}%>
         </div>
       </div>
