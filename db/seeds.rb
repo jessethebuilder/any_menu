@@ -1,3 +1,11 @@
+ENTREES = {:chicken_and_grits => "Southern fried chicken that has been marinading in herbs and buttermilk served over fresh,
+                                  buttery grits with gravy. Homestyle or redeye. We recommend the redeye.",
+           :taters_and_onions => "Served with ketchup and salt.",
+           :agadashi_tofu => "Fresh, organic, deep-fried silken tofu with ginger, daikon, and spring onion.",
+           :bachelor_steak => "A premium T-bone cooked in salt and butter over a blazing hot skillet with herbs, mushrooms, and garlic.",
+           :turkey_dinner => "Smoked white and dark meat with bacon, served with pureed potatoes and butter, cranberry relish, and roasted butternut squash with sesame."
+}
+
 u = User.new(:email => 'info@any-menu.com', :password => 'testtest', :user_type => 'owner')
 u.save
 
@@ -8,6 +16,7 @@ s = Store.new(:name => "Japanese Letters",
               :delivers => true,
               :dine_in => true,
               :facebook_app_id => '1438033749758995',
+              :facebook_secret => 'c78b3d4aa4b98b6badbcd1cbbf7af394',
               :average_wait_time => 20
              )
 hours = HoursAvailable.new
@@ -24,13 +33,13 @@ s.menus << m
 m.save!
 #m.hours_available = hours.dup
 
-['Appetizers', 'Entrees'].each do |section_name|
-  sec = Section.new :name => section_name, :description => Faker::Lorem.paragraph(sentence_count = 1)
+['Entrees'].each do |section_name|
+  sec = Section.new :name => section_name, :description => "All meals are served with all the bread you need, a fresh herb salad, and hot sauce."
   sec.save!
-    10.times do
-      i = Item.new :name => "Chicken and Grits",
-                   :cost => 11.95,
-                   :description => "Eat it with butter and gravy!",
+    ENTREES.each do |k, v|
+      i = Item.new :name => k.to_s.titlecase,
+                   :cost => Random.rand(8.0..24.0),
+                   :description => v,
                    :long_description => "My love affair with Chicken and Grits began when I was a little girl.
                                          I remember every summer, my Great Aunt Megatron would take us to her summer villa,
                                          and we would drink all night and eat Chicken and Grits at 4:00 in the morning."

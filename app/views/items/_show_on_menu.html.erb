@@ -15,22 +15,10 @@
       </div>
     </div><!--col-->
 
-    <%= form_for OrderItem.new, :remote => true do |oi| %>
-      <%= oi.hidden_field :item_id, :value => item.id %>
-      <%= oi.hidden_field :cost, :value => item.cost %>
-      <div class="col-sm-4 col-sm-offset-1">
-        <div class="form-group">
-          <%#= oi.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
-        </div>
-      </div><!--col-->
 
-      <div class="col-sm-4">
-        <div id="order_button" class="form-group">
-          <%= oi.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
-        </div>
-      </div><!--col-->
-
-    <% end %><!--Order form-->
+      <div class="col-sm-4 col-sm-offset-2">
+        <%= render :partial => 'order_items/add_to_order_button', :locals => {:item => item, :ajax => true} %>
+      </div>
   </div><!--col-->
 </div><!--container-->
 

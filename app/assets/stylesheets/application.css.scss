@@ -13,8 +13,13 @@ $modal-content-bg: $navbar-inverse-bg;
 //Japanese Letters
 $input-bg: #e5e5e5;
 $input-border-focus: #9902ff;
-
-
+$well-bg: rgba(37, 37, 37, 0.93);
+.well{
+  color: white;
+}
+.well h3{
+  color: white;
+}
 
 @import "bootstrap";
 /*
@@ -28,20 +33,21 @@ $input-border-focus: #9902ff;
 .section{
   margin-top: 40px;
 }
-
-
 //Menu
 #order_button{
-  padding-top: 20px;
+  padding-top: 8px;
+}
+.row.item{
+  border-bottom: solid 1px rgba(36, 36, 36, 0.58);
 }
 #order_item_added_notification{
   font-size: 20px;
   color: white;
 }
-
 //================== Japanese Letters ============================================
+
 body{
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(68, 68, 68);
 }
 h1{
   color: #ffffff;
@@ -53,8 +59,7 @@ h1 small{
 }
 h2{
   color: #ffffff;
-
-  font-family: "Brush Script MT", cursive;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   font-size: 48px;
 }
 h2 small{
@@ -68,7 +73,8 @@ h4{
   font-size: 28px;
   color: #ffffff;
 
-  font-family: "Brush Script MT", cursive;
+//  font-family: "Brush Script MT", cursive;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
 h4 small{
   color: rgba(235, 235, 235, 0.75);
@@ -85,18 +91,36 @@ h4 small{
 .control-label{
   color: white;
 }
+small{
+  color:white;
+}
 
+#order_item_added_notification{
+  font-family: "Brush Script MT", cursive;
+}
+
+//----------------------links----------------------------
+h4 a:link{
+  color: #ffc300;
+}
+h4 a:visited{
+  color: #ffc300;
+}
+h2 a:link{
+  color: #ffc300;
+}
+h2 a:visited{
+  color: #ffc300;
+}
 //-------------------------Modal---------------------------
 .modal-body form{
   color: white;
 }
-
 //----------------------Carousel-------------------------
 #express_carousel{
   width: 480px;
   height: 480px;
 }
-
 //-------------------FB comment plugin----------------------
 .fb-comments{
   margin-top: 20px;

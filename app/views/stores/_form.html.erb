@@ -22,7 +22,7 @@
 
       <div class="form-group">
         <%= f.label :average_wait_time, 'Average wait time<small> in minutes </small>'.html_safe, :class => 'control-label' %>
-        <%= f.text_field :average_wait_time, :value => 20, :class => 'form-control' %>
+        <%= f.number_field :average_wait_time, :value => 20, :class => 'form-control' %>
       </div>
 
       <div class="checkbox">
@@ -42,6 +42,12 @@
         <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
       </div>
 
+      <div class="checkbox">
+        <label class="control-label">
+          <%= f.check_box :accept_checks, :class => 'form-control' %>
+        </label>
+      </div>
+
       <div class="form-group">
         <%= f.label :menu_package, :class => 'control-label' %>
         <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
@@ -50,6 +56,11 @@
       <div class="form-group">
         <%= f.label :facebook_app_id, 'Facebook app id', :class => 'control-label' %>
         <%= f.text_field :facebook_app_id, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :facebook_secret, :class => 'control-label' %>
+        <%= f.text_field :facebook_secret, :class => 'form-control' %>
       </div>
 
       <div class="form-group">

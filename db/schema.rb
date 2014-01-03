@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(version: 20140102200342) do
     t.string   "menu_package"
     t.boolean  "dine_in"
     t.string   "facebook_app_id"
+    t.string   "facebook_secret"
     t.integer  "average_wait_time"
   end
 

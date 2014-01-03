@@ -1,0 +1,17 @@
+<%= form_for OrderItem.new, :remote => local_assigns[:ajax] do |oi| %>
+  <%= oi.hidden_field :item_id, :value => item.id %>
+  <%= oi.hidden_field :cost, :value => item.cost %>
+  <!--<div class="col-sm-4 col-sm-offset-1">-->
+    <% if local_assigns[:show_quantity] %>
+      <div class="form-group">
+        <%= oi.number_field :quantity, :class => 'form-control', :min => 1, :placeholder => 'quantity (1)' %>
+      </div>
+    <% end %>
+  <!--</div>-->
+
+  <!--<div class="col-sm-4">-->
+    <div id="order_button" class="form-group">
+      <%= oi.submit 'Add to Order', :class => 'btn btn-primary form-control' %>
+    </div>
+  <!--</div>-->
+<% end %>

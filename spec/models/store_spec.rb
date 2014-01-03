@@ -43,7 +43,19 @@ describe Store do
 
 
 
+
+
   end
+
+  describe '#payment_types' do
+
+    describe '#accepts_checks' do
+      it 'should default to true' do
+        s = Store.new
+        s.accepts_checks.should be_true
+      end
+    end #accepts_checks
+  end #payment_types
 
   #describe '#current_menu' do
   #  before(:each) do
