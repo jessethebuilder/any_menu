@@ -11,8 +11,11 @@
       </h2>
 
       <h4 class="text-center">
-        <%= @item.description %><br>
-        <%= link_to '(back to menu)', menu_path(@menu, :anchor => "item_#{@item.id}") %>
+        <%= @item.description %>
+        <% if @menu %>
+          <br>
+          <%= link_to '(back to menu)', menu_path(@menu, :anchor => "item_#{@item.id}") %>
+        <% end %>
       </h4>
     </div><!--col-->
   </div><!--row-->

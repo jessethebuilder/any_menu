@@ -51,7 +51,7 @@ describe Menu do
     it 'should add the id of any section added to menu at the end of the Array' do
       new_section = create :section
       menu.sections << new_section
-      menu.section_order.last.should == new_section.to_param
+      menu.section_order.last.should == new_section.id
     end
 
     it 'should remove section_id from section_order when section is removed' do
@@ -64,20 +64,20 @@ describe Menu do
       specify 'it expects 2 parameters: a section and a positive or negative integer' do
         test_section = Section.first
         menu.move_section(test_section, 1)
-        menu.section_order[1].should == test_section.to_param
+        menu.section_order[1].should == test_section.id
 
         test_section2 = Section.last
         menu.move_section(test_section2, -1)
-        menu.section_order[1].should == test_section2.to_param
+        menu.section_order[1].should == test_section2.id
       end
 
       specify 'velocities that outside of #section_order array bounds loop around' do
         test_section = Section.first
         menu.move_section(test_section, -1)
-        menu.section_order.last.should == test_section
+        menu.section_order.last.should == test_section.id
 
         menu.move_section(test_section, 1)
-        menu.section_order.first.should == test_section
+        menu.section_order.first.should == test_section.id
       end
 
       #it 'should throw an error if the move_modifier tries to place section out of bounds' do

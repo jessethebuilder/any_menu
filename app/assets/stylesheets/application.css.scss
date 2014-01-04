@@ -1,3 +1,19 @@
+//--------------------Footer--------------------
+$footer-color: #242424;
+$footer-bg-color: rgba(255, 255, 255, 0.71);
+
+#footer_row{
+  background-color: $footer-bg-color;
+  padding-bottom: 50px;
+  z-index: -2;
+}
+#footer_row h3{
+  color: $footer-color;
+}
+#footer_row address{
+  color: $footer-color;
+}
+
 //buttons
 $btn-primary-bg: rgba(37, 2, 74, 0.58);
 
@@ -5,7 +21,11 @@ $close-color: rgba(255, 0, 22, 0.59);
 $close-font-weight: 800;
 
 //navbar
-$navbar-inverse-bg: rgba(36, 36, 36, 0.95);
+//$navbar-inverse-bg: rgba(36, 36, 36, 0.95);
+$navbar-inverse-bg: $footer-bg-color;
+$navbar-inverse-color: $footer-color;
+$navbar-inverse-brand-color: $footer-color;
+
 
 //modal
 $modal-content-bg: $navbar-inverse-bg;
@@ -125,3 +145,4 @@ h2 a:visited{
 .fb-comments{
   margin-top: 20px;
 }
+

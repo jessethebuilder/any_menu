@@ -15,18 +15,20 @@ describe Store do
   end
 
   describe 'validation' do
+    it{ should validate_presence_of :address }
+
     it{ should validate_presence_of :name }
     it{ should validate_numericality_of :sales_tax_rate }
     it{ should validate_presence_of :sales_tax_rate }
     it{ should validate_presence_of :menu_package }
     it{ should ensure_inclusion_of(:menu_package).in_array(MENU_PACKAGES) }
 
-    it{ should validate_presences_of(:average_wait_time) }
-    it{ should validate_numericallity_of :average_wait_time }
+    it{ should validate_presence_of(:average_wait_time) }
+    it{ should validate_numericality_of :average_wait_time }
     it 'should add error if #average_wait_time is less than 1' do
       store.average_wait_time = Random.rand(-10000..0)
       store.should be_invalid
-      store.errors[:average_wait_time].should include 'cannot be less than 1'
+      store.errors[:average_wait_time].should include 'must be greater than or equal to 1'
     end
 
     it 'should add error, before create if a Store already exists' do
@@ -40,22 +42,24 @@ describe Store do
       store.valid?.should be_false
       store.errors[:sales_tax_rate].include?("must be greater than or equal to 0").should be_true
     end
+  end #validations
 
-
-
-
-
+  describe 'Address' do
+    specify 'store should have address upon initialization' do
+      s = Store.new
+      s.address.should_not be_nil
+    end
   end
 
-  describe '#payment_types' do
-
-    describe '#accepts_checks' do
-      it 'should default to true' do
-        s = Store.new
-        s.accepts_checks.should be_true
-      end
-    end #accepts_checks
-  end #payment_types
+  #describe '#payment_types' do
+  #
+  #  describe '#accepts_checks' do
+  #    it 'should default to true' do
+  #      s = Store.new
+  #      s.accepts_checks.should be_true
+  #    end
+  #  end #accepts_checks
+  #end #payment_types
 
   #describe '#current_menu' do
   #  before(:each) do

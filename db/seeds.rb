@@ -17,8 +17,17 @@ s = Store.new(:name => "Japanese Letters",
               :dine_in => true,
               :facebook_app_id => '1438033749758995',
               :facebook_secret => 'c78b3d4aa4b98b6badbcd1cbbf7af394',
-              :average_wait_time => 20
+              :average_wait_time => 20,
+              :phone => "360-670-9312"
              )
+address = Address.new(
+    :street => "4218 Mt. Angeles Rd",
+    :city => "Port Angeles",
+    :state => 'wa',
+    :zip => '98362'
+)
+s.address = address
+
 hours = HoursAvailable.new
 DAYS.each do |day|
   hours.send("#{day}_open=", "9:00AM")

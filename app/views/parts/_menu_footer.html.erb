@@ -1,0 +1,18 @@
+<div id="footer_row" class="row">
+  <div class="col-xs-12">
+
+    <address class="text-center">
+      <h3 class="text-center">
+        <%= store.name %>
+      </h3>
+      <strong>
+        <%= link_to store.phone, "tel:#{store.phone.gsub(/[ -.]/, '') }" %><br>
+      </strong>
+      <%= store.address.street %><br>
+      <%= "#{store.address.street2}</br>" if store.address.street2 %>
+      <%= "#{store.address.street3}</br>" if store.address.street3 %>
+      <%= "#{store.address.city}, #{store.address.state.upcase} #{store.address.zip}" %>
+    </address>
+    <!--</p>-->
+  </div>
+</div>

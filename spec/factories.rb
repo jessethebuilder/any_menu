@@ -150,4 +150,9 @@ FactoryGirl.define do
       user_type 'owner'
     end
   end
+
+  factory :address do
+
+
+  end
 end

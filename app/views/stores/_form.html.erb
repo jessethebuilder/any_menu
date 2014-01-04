@@ -37,31 +37,56 @@
         </label>
       </div>
 
-      <div class="form-group">
-        <%= f.label :sales_tax_rate, :class => 'control-label' %>
-        <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
+      <h3>Store Address
+        <small>
+          <%= show_hide_switch('#store_address') %>
+          <%#= link_to_function '(show)', "aShowHideSwitch('#store_address', '#store_address_switch')", :id => 'store_address_switch' %>
+        </small>
+      </h3>
+      <div id="store_address">
+        <%= fields_for :address do |address_fields| %>
+          <%= render :partial => 'addresses/form', :locals => {:f => address_fields} %>
+        <% end %>
       </div>
 
-      <div class="checkbox">
-        <label class="control-label">
-          <%#= f.check_box :accept_checks, :class => 'form-control' %>
-        </label>
-      </div>
+      <h3>Advanced Options
+        <small>
+          <%= show_hide_switch('#advanced_options') %>
+        </small>
+      </h3>
 
-      <div class="form-group">
-        <%= f.label :menu_package, :class => 'control-label' %>
-        <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
-      </div>
+      <div id="advanced_options" class='hidden'>
+        <div class="form-group">
+          <%= f.label :phone, :class => 'control-label' %>
+          <%= f.phone_field :phone, :class => 'form-control' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :facebook_app_id, 'Facebook app id', :class => 'control-label' %>
-        <%= f.text_field :facebook_app_id, :class => 'form-control' %>
-      </div>
+        <div class="form-group">
+          <%= f.label :sales_tax_rate, :class => 'control-label' %>
+          <%= f.text_field :sales_tax_rate, :class => 'form-control' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :facebook_secret, :class => 'control-label' %>
-        <%= f.text_field :facebook_secret, :class => 'form-control' %>
-      </div>
+        <!--<div class="checkbox">-->
+          <!--<label class="control-label">-->
+            <%#= f.check_box :accept_checks, :class => 'form-control' %>
+          <!--</label>-->
+        <!--</div>-->
+
+        <div class="form-group">
+          <%= f.label :menu_package, :class => 'control-label' %>
+          <%= f.select :menu_package, array_for_select(MENU_PACKAGES), {}, {:class => 'form-control'} %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :facebook_app_id, 'Facebook app id', :class => 'control-label' %>
+          <%= f.text_field :facebook_app_id, :class => 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :facebook_secret, :class => 'control-label' %>
+          <%= f.text_field :facebook_secret, :class => 'form-control' %>
+        </div>
+      </div><!--advanced options-->
 
       <div class="form-group">
         <%= f.submit :class => 'btn btn-primary form-control' %>

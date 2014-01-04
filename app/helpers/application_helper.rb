@@ -63,6 +63,14 @@ module ApplicationHelper
     end
   end
 
+  public
+  #refactor to farmtools and spec
+  def show_hide_switch(selector, start_hidden = true)
+    #js checks for the text (show) or (hide) to determine behavior
+    start_hidden ? state = '(show)' : state = '(hide)'
+    "#{selector}_switch" =~ /[$.#]?(.+)/
+    link_to state, '#', :onclick => "showHideSwitch('#{selector}', '#{selector}_switch'); return false", :id => $1
+  end
 end
 
 

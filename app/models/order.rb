@@ -38,8 +38,6 @@ class Order < ActiveRecord::Base
 
   public
 
-
-
   STATUSES = %w[completing]
   validates :status, :inclusion => {:in => STATUSES}, :allow_blank => true
 
@@ -55,9 +53,6 @@ class Order < ActiveRecord::Base
   end
 
   def total
-    #untested
     order_items_total + tax
   end
-
-
 end

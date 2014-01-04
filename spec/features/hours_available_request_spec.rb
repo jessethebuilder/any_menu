@@ -3,10 +3,14 @@ require 'spec_helper'
 describe 'Hours Available Requests' do
 
   describe 'Closing a day' do
-    store = make_store_and_login_as_owner
-    store.hours_available.sunda
-    visit edit_store_path(store)
-
+    let!(:store){ create :test_store }
+    specify 'Clicking close next to #day_open closes the store for that day' do
+      login_owner
+      visit edit_store_path(store)
+      within('#hours_available') do
+        find 'close'
+      end
+    end
 
   end
 

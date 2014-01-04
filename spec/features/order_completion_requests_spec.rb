@@ -34,8 +34,8 @@ describe 'Order completion requests' do
 
     it 'should include the total of all order items' do
       visit complete_order_path(order)
-      within('#order_items_total') do
-        page.should have_text number_to_currency(order.order_items_total)
+      within('#total') do
+        page.should have_text number_to_currency(order.total)
       end
     end
 
@@ -52,13 +52,14 @@ describe 'Order completion requests' do
       login(owner)
       visit edit_store_path(store)
       fill_in 'Sales tax rate', :with => '10'
+      click_button 'Update Store'
 
-      order = create :order
+      o = create :order
       10.times do
-        order.order_items << create(:order_item, :cost => 1, :quantity => 10)
+        o.order_items << create(:order_item, :cost => 1, :quantity => 10)
       end
 
-      visit complete_order_path(order)
+      visit complete_order_path(o)
 
       within('#tax') do
          page.should have_content('10.00')

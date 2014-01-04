@@ -1,7 +1,7 @@
 class Address < ActiveRecord::Base
   belongs_to :addressable, :polymorphic => true
 
-  validates :name, :presence => true
+  #validates :name, :presence => true
 
   geocoded_by :address_for_geocode
 

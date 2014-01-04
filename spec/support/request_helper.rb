@@ -7,7 +7,7 @@ module RequestHelper
   end
 
   def login_owner
-    create :store
+    create :store unless Store.first
     owner = create :owner
     login(owner)
     owner

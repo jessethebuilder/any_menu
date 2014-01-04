@@ -17,7 +17,9 @@ class Store < ActiveRecord::Base
     errors.add :id, 'Only 1 Store can exist' unless Store.all.empty?
   end
 
-  has_one :address, :as => :addressable
+  has_one :address, :as => :addressable, :dependent => :destroy
+  validates :address, :presence => true
+  accepts_nested_attributes_for :address
 
   validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
 

@@ -60,9 +60,11 @@ describe Order do
 
     describe '#total' do
       it 'should return the total of all order_items + tax where applicable' do
+        store = create :store
         3.times do
           order.order_items << create(:order_item)
         end
+        order.save!
         order.total.should == order.order_items.collect{ |oi| oi.item_total + oi.tax }.reduce(:+)
       end
     end
@@ -73,9 +75,10 @@ describe Order do
       it 'should be invalid if time to place order is after time the store closes' do
         create :store
         #default store is always closed (each day of hours_available is set to nil)
-        order = create :order, :place_order_at => Time.parse('12:00pm')
+        order = create :order
+        order.place_order_at = Time.parse('12:00pm')
         order.valid?.should be_false
-        order.errors(:place_order_at).should include('is after we close.')
+        order.errors[:place_order_at].should include('is after we close.')
       end
     end
   end

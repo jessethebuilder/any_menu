@@ -25,5 +25,18 @@ function showOrderItemAddedNotification(slideSpeed, delay){
   }, delay)
 }
 
+
+
 //fb comments
 
+//General functions
+
+function showHideSwitch(selector, switchSelector){
+  if($(switchSelector).text() == '(show)'){
+    $(selector).removeClass('hidden');
+    $(switchSelector).text('(hide)');
+  } else {
+    $(selector).addClass('hidden');
+    $(switchSelector).text('(show)');
+  }
+}

@@ -7,19 +7,19 @@ class Menu < ActiveRecord::Base
 
   def add_to_section_order(section)
     section_order = read_attribute(:section_order)
-    section_order << section.to_param
+    section_order << section.id
     self.update(:section_order => section_order)
   end
 
   def remove_from_section_order(section)
     section_order = read_attribute(:section_order)
-    section_order.delete(section.to_param)
+    section_order.delete(section.id)
     self.update(:section_order => section_order)
   end
 
   def move_section(section, velocity)
     section_order = read_attribute(:section_order)
-    from_index = section_order.index(section.to_param)
+    from_index = section_order.index(section.id)
     section_order.move!(from_index, from_index + Integer(velocity))
     self.update(:section_order => section_order)
   end

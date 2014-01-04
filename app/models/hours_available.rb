@@ -7,10 +7,9 @@ class HoursAvailable < ActiveRecord::Base
   validate :opens_have_closes
 private
   def opens_have_closes
-    @d = day_methods_hash
     day_methods_hash.each do |day, methods|
-      if methods[:open] && !methods[:close]
-        errors.add methods[:close], "must also have a #{day.to_s.titlecase} close."
+      if read_attribute(methods[:open]) && !read_attribute(methods[:close])
+        errors.add methods[:open], "must also have a #{day.to_s.titlecase} close."
       end
     end
   end
@@ -20,7 +19,7 @@ private
       open = "#{day}_open".to_sym
       close = "#{day}_close".to_sym
 
-      if read_attribute(open)
+      if read_attribute(open) && read_attribute(close)
         if read_attribute(close) < read_attribute(open)
           errors.add close, "cannot be before #{day.titlecase} open"
           errors.add open, "cannot be after #{day.titlecase} close"

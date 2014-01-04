@@ -1,7 +1,7 @@
 <div class="hours_available">
   <% DAYS.each do |day| %>
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-xs-6">
         <div class="form-group open_time_select">
           <% attr = "#{day}_open".to_sym %>
 
@@ -11,10 +11,11 @@
           <div class="form-inline">
             <%= f.time_select attr, {:minute_step => 15, :ampm => true},
                                      :class => 'form-control', :value => f.object.send(attr) %>
-
           </div>
         </div>
+      </div><!--col-->
 
+      <div class="col-xs-6">
         <div class="form-group close_time_select">
           <% attr = "#{day}_close".to_sym %>
           <%= f.label attr, :class => 'control-label' %>

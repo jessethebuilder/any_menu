@@ -52,6 +52,13 @@
         <%= f.submit :class => 'btn btn-primary form-control' %>
       </div>
 
+      <% unless @item.new_record? %>
+        <div class="form-group">
+          <%= link_to 'Delete Item', path_to_edit_section, :method => :delete, :class => 'btn btn-danger form-control',
+                      :data => { :confirm => 'This will PERMANENTLY delete this Item. Are you sure?' }%>
+        </div>
+      <% end %>
+
       <!--<div class="form-group">-->
         <!--<%#= f.submit 'Preview', :class => 'btn btn-info form-control' %>-->
       <!--</div>-->

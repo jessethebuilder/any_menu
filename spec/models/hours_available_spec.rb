@@ -22,11 +22,11 @@ describe HoursAvailable do
       hours_available.should be_valid
     end
 
-    it 'validates that if an #closed is given, a #open exists' do
+    it 'validates that if an #closed is given, an #open exists' do
       #if #open is nil, store is closed, so #close is not evaluated.
-      hours_available.sunday_open = Time.parse("12:00pm")
-      hours_available.valid?.should be_false
-      hours_available.errors[:sunday_open].should include('must also have a Sunday close.')
+      hours.sunday_close = nil
+      hours.valid?.should be_false
+      hours.errors[:sunday_open].should include('must also have a Sunday close.')
     end
   end
 

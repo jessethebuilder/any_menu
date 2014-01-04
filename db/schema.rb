@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102200342) do
+ActiveRecord::Schema.define(version: 20140104013629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20140102200342) do
     t.string   "name"
     t.string   "street"
     t.string   "street2"
-    t.string   "apartment_number"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140102200342) do
     t.string   "addressable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "street3"
   end
 
   create_table "exception_to_availabilities", force: true do |t|
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(version: 20140102200342) do
     t.string   "facebook_app_id"
     t.string   "facebook_secret"
     t.integer  "average_wait_time"
+    t.string   "phone"
   end
 
   create_table "topping_lists", force: true do |t|

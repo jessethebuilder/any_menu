@@ -34,6 +34,7 @@ class StoresController < ApplicationController
   def new
     @store = Store.new
     @store.build_hours_available
+    @store.build_address
   end
 
   def create
@@ -77,7 +78,8 @@ class StoresController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
       params.require(:store).permit(:name, :description, :delivers, :dine_in, :sales_tax_rate, :menu_package,
-                                    :facebook_app_id, :facebook_secret, :average_wait_time,
+                                    :facebook_app_id, :facebook_secret, :average_wait_time, :phone,
+                                    :address_attributes => [:street, :street2, :street3, :city, :state, :zip],
                                     :hours_available_attributes => [:id, :sunday_open, :sunday_close, :monday_open, :monday_close,
                                                                     :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close,
                                                                     :thursday_open, :thursday_close, :friday_open, :friday_close,

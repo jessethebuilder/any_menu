@@ -8,10 +8,10 @@ describe 'Item Show Requests' do
     i = s.items.first
 
     visit section_item_path(s, i)
-    page.should_not have_link 'Add to Order'
+    page.should_not have_button 'Add to Order'
 
     visit menu_section_item_path(m, s, i)
-    page.should have_link 'Add to Order'
+    page.should have_button 'Add to Order'
 
   end
 end

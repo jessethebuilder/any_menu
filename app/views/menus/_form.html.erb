@@ -11,7 +11,7 @@
     </div><!--col-->
 
     <div class="col-md-4">
-      <h2>Menu Options</h2>
+      <h3>Menu Options</h3>
       <div class="form-group">
         <%= f.label :name, :class => 'control-label' %>
         <%= f.text_field :name, :class => 'form-control' %>
@@ -36,7 +36,7 @@
 
     <% unless store.menu_package == 'single_menu' %>
     <div class="col-md-4">
-      <h2>Hours of Operation</h2>
+      <h3>Hours of Operation</h3>
       <%= f.fields_for :hours_available do |ha_fields| %>
         <%= render :partial => 'hours_available/form_small', :locals => {:f => ha_fields} %>
       <% end %>
