@@ -56,7 +56,7 @@ m.save!
       sec.items << i
     end
   m.sections << sec
- end
+end
 m.save!
 
 3.times do

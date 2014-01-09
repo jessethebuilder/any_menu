@@ -65,7 +65,7 @@ describe Order do
           order.order_items << create(:order_item)
         end
         order.save!
-        order.total.should == order.order_items.collect{ |oi| oi.item_total + oi.tax }.reduce(:+)
+        order.total.round(2).should == order.order_items.collect{ |oi| oi.item_total + oi.tax }.reduce(:+).round(2)
       end
     end
   end

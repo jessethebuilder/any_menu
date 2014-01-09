@@ -17,6 +17,7 @@ describe Store do
   describe 'validation' do
     it{ should validate_presence_of :address }
 
+    it{ should validate_presence_of :phone}
     it{ should validate_presence_of :name }
     it{ should validate_numericality_of :sales_tax_rate }
     it{ should validate_presence_of :sales_tax_rate }
@@ -45,10 +46,7 @@ describe Store do
   end #validations
 
   describe 'Address' do
-    specify 'store should have address upon initialization' do
-      s = Store.new
-      s.address.should_not be_nil
-    end
+
   end
 
   #describe '#payment_types' do

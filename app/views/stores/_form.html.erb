@@ -43,8 +43,8 @@
           <%#= link_to_function '(show)', "aShowHideSwitch('#store_address', '#store_address_switch')", :id => 'store_address_switch' %>
         </small>
       </h3>
-      <div id="store_address">
-        <%= fields_for :address do |address_fields| %>
+      <div id="store_address" class="hidden">
+        <%= f.fields_for :address do |address_fields| %>
           <%= render :partial => 'addresses/form', :locals => {:f => address_fields} %>
         <% end %>
       </div>

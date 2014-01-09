@@ -26,20 +26,32 @@ describe ApplicationHelper do
     end
   end
 
+  describe #helpers for
+
   describe '#owner?' do
-    it 'returns true of current_user is an owner' do
-      pending
+    it 'returns true if current_user is an owner' do
+      o = create :owner
+      o.owner?should be_true
     end
 
-    it 'returns false if there is no owner' do
-      pending
-      #owner?.should be_false
+    it 'returns false if current_user is not an owner' do
+      o = create :customer
+      o.owner?.should be_false
     end
   end
 
   describe '#super_user?' do
     it 'returns true if user is an owner or store_user' do
-      pending
+      o = create :owner
+      o.super_user?.should be_true
+
+      o = create :store_user
+      o.super_user?.should be_true
+    end
+
+    it 'returns false if user is not an owner or store_user' do
+      o = create :customer
+      o.super_user?.should be_false
     end
   end
 

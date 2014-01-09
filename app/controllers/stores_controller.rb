@@ -29,19 +29,21 @@ class StoresController < ApplicationController
   def show
   end
   def edit
+
   end
 
   def new
     @store = Store.new
     @store.build_hours_available
     @store.build_address
+    #@store.address = Address.new
   end
 
   def create
     @store = Store.new(store_params)
 
     respond_to do |format|
-      if @store.save
+      if @store.save!
         format.html { redirect_to edit_store_path(@store), notice: 'Store was successfully created.' }
       else
         format.html { render action: 'new' }

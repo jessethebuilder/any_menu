@@ -38,7 +38,7 @@ class Order < ActiveRecord::Base
 
   public
 
-  STATUSES = %w[completing]
+  STATUSES = %w[taking completing placed served funded]
   validates :status, :inclusion => {:in => STATUSES}, :allow_blank => true
 
   PAYMENT_METHODS = %w|cash check|

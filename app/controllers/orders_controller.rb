@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy, :review, :complete]
+  before_filter :authenticate_user!, :only => [:index]
 
   def review
 

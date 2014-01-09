@@ -7,6 +7,8 @@ class Store < ActiveRecord::Base
 
   validates :sales_tax_rate, :presence => true, :numericality => { :greater_than_or_equal_to => 0 }
 
+  validates :phone, :presence => true
+
   belongs_to :hours_available, :dependent => :destroy
   #todo Following line MUST be uncommented and specs pass.
   validates :hours_available, :presence => true
@@ -17,13 +19,14 @@ class Store < ActiveRecord::Base
     errors.add :id, 'Only 1 Store can exist' unless Store.all.empty?
   end
 
-  has_one :address, :as => :addressable, :dependent => :destroy
+  has_one :address, :as => :addressable#, :dependent => :destroy
   validates :address, :presence => true
   accepts_nested_attributes_for :address
 
   validates :menu_package, :presence => true, :inclusion => {:in => MENU_PACKAGES}
 
   validates :average_wait_time, :presence => true, :numericality => { :greater_than_or_equal_to => 1 }
+
 
   def dining_location_options
     arr = ['take_out']

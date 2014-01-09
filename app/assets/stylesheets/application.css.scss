@@ -1,44 +1,61 @@
-//--------------------Footer--------------------
-$footer-color: #242424;
-$footer-bg-color: rgba(255, 255, 255, 0.71);
+//template colors
+$main_background_color: #ededed;
+$main_letter_color: rgba(36, 36, 36, 0.90);
+$secondary_background_color: #e5e5e5;
+$secondary_letter_color: white;
+$highlight_letter_color: #000000;
+
+$text_input_bg_color: white;
+
+$primary_color: rgba(94, 40, 130, 0.90);
+
+
+//background
+$background_color: $main_background_color;
+
+$main_font: Copperplate, "Copperplate Gothic Light", fantasy;
+$highlight_font: "Brush Script MT", cursive;
+
+//footer
+$footer-color: $main_background_color;
 
 #footer_row{
-  background-color: $footer-bg-color;
+  background-color: $main_letter_color;
+  color: $main_background_color;
   padding-bottom: 50px;
   z-index: -2;
 }
 #footer_row h3{
-  color: $footer-color;
+  color: $main_background_color;
 }
-#footer_row address{
-  color: $footer-color;
+address{
+  color: $main_background_color;
 }
 
 //buttons
-$btn-primary-bg: rgba(37, 2, 74, 0.58);
+$btn-primary-bg: $primary_color;
 
-$close-color: rgba(255, 0, 22, 0.59);
+$close-color: rgba(255, 0, 22, 1.0);
 $close-font-weight: 800;
 
 //navbar
 //$navbar-inverse-bg: rgba(36, 36, 36, 0.95);
-$navbar-inverse-bg: $footer-bg-color;
-$navbar-inverse-color: $footer-color;
-$navbar-inverse-brand-color: $footer-color;
+$navbar-inverse-bg: $main_letter_color;
+$navbar-inverse-color: $main_background_color;
+$navbar-inverse-brand-color: $main_background_color;
 
 
 //modal
-$modal-content-bg: $navbar-inverse-bg;
+$modal-content-bg: $secondary_background_color;
 
-//Japanese Letters
-$input-bg: #e5e5e5;
-$input-border-focus: #9902ff;
-$well-bg: rgba(37, 37, 37, 0.93);
+$input-bg: $text_input_bg_color;
+$input-border-focus: $primary_color;
+$well-bg: $text_input_bg_color;
 .well{
-  color: white;
+  color: $main_letter_color;
 }
 .well h3{
-  color: white;
+  color: $main_letter_color;
 }
 
 @import "bootstrap";
@@ -58,46 +75,44 @@ $well-bg: rgba(37, 37, 37, 0.93);
   padding-top: 8px;
 }
 .row.item{
-  border-bottom: solid 1px rgba(36, 36, 36, 0.58);
+  border-bottom: solid 1px $secondary_background_color;
 }
 #order_item_added_notification{
-  font-size: 20px;
-  color: white;
+  font-size: 40px;
+  color: $main_letter_color;
 }
 //================== Japanese Letters ============================================
 
 body{
-  background-color: rgb(68, 68, 68);
+  background-color: $background_color;
 }
 h1{
-  color: #ffffff;
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: $main_letter_color;
+  font-family: $main_font;
   font-size: 64px;
 }
 h1 small{
-  color: rgba(235, 235, 235, 0.75);
+  color: $main_letter_color;
 }
 h2{
-  color: #ffffff;
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: $main_letter_color;
+  font-family: $main_font;
   font-size: 48px;
 }
 h2 small{
-  color: rgba(235, 235, 235, 0.75);
+  color: $main_letter_color;
 }
 h3{
-  color: #7c7c7c;
+  color: $main_letter_color;
   font-size: 30px;
 }
 h4{
   font-size: 28px;
-  color: #ffffff;
-
-//  font-family: "Brush Script MT", cursive;
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: $main_letter_color;
+  font-family: $main_font;
 }
 h4 small{
-  color: rgba(235, 235, 235, 0.75);
+  color: $main_letter_color;
 }
 #background_image{
   position: fixed;
@@ -106,35 +121,36 @@ h4 small{
   z-index: -1;
 }
 .item{
-  color: white;
+  color: $main_letter_color;
 }
 .control-label{
-  color: white;
+  color: $main_letter_color;
 }
 small{
-  color:white;
+  color: $main_letter_color
 }
 
 #order_item_added_notification{
-  font-family: "Brush Script MT", cursive;
+  font-family: $highlight_font; 
+  color: $main_background_color;
 }
 
 //----------------------links----------------------------
 h4 a:link{
-  color: #ffc300;
+  color: $highlight_letter_color;
 }
 h4 a:visited{
-  color: #ffc300;
+  color: $highlight_letter_color;
 }
 h2 a:link{
-  color: #ffc300;
+  color: $highlight_letter_color;
 }
 h2 a:visited{
-  color: #ffc300;
+  color: $highlight_letter_color;
 }
 //-------------------------Modal---------------------------
 .modal-body form{
-  color: white;
+  color: $main_letter_color;
 }
 //----------------------Carousel-------------------------
 #express_carousel{

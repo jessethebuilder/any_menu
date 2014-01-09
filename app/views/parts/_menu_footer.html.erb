@@ -11,7 +11,7 @@
       <%= store.address.street %><br>
       <%= "#{store.address.street2}</br>" if store.address.street2 %>
       <%= "#{store.address.street3}</br>" if store.address.street3 %>
-      <%= "#{store.address.city}, #{store.address.state.upcase} #{store.address.zip}" %>
+      <%= "#{store.address.city.to_s}, #{store.address.state.to_s.upcase} #{store.address.zip.to_s.upcase}" %>
     </address>
     <!--</p>-->
   </div>
